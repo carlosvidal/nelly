@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitecta Nelly Cúneo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+    ></script>
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      .proyecto {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 15px;
+        margin-bottom: 30px;
+        .proyecto-nombre {
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+        .image-wrapper {
+          width: 200px;
+          height: auto;
+          overflow: hidden;
+          aspect-ratio: 4/3;
+          border: 1px solid red;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      img {
+        max-width: 125%;
+        height: auto;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Arq. Nelly Alexandra Cúneo Galdós</h1>
+      <p>CAP 8942</p>
+      <!--  -->
+      <div
+        x-data="{ proyectos: []}"
+        x-init="proyectos = await (await fetch('./asesorias.json')).json()"
+      >
+        <h2>Asesorías EDGE</h2>
+        <div class="">
+          <template x-for="(proyecto, index) in proyectos">
+            <div class="proyecto">
+              <div class="image-wrapper">
+                <img :src="proyecto.Imagen" alt="" />
+              </div>
+              <div class="proyecto-info">
+                <p class="proyecto-nombre">
+                  <span x-text="proyecto.Nombre">Nombre</span> en
+                  <span x-text="proyecto.Ubicación">Ubicación</span> de
+                  <span x-text="proyecto.Cliente">Cliente</span>
+                </p>
+                <p x-text="proyecto.Descripción">Descripción</p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

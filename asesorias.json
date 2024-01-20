@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "Año": "",
+    "Nombre": "Edificio Mariscal Castilla",
+    "Ubicación": "San Borja",
+    "Cliente": "Pabott Inversiones SAC",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Mariscal+Castilla",
+    "Descripción": "Se brindó apoyo al cliente para el logro de la CERTIFICACIÓN PRELIMINAR EDGE, mediante la aplicación de estrategias al proyecto referentes a Energía, Agua y Materiales. Posteriormente logró la CERTIFICACIÓN POST-CONSTRUCCIÓN"
+  },
+  {
+    "id": 2,
+    "Año": "",
+    "Nombre": "Edificio Hermano Lobo I y II",
+    "Ubicación": "San Borja",
+    "Cliente": "JN Construcciones e Inversiones S.A.",
+    "Imagen": "https://placehold.co/400x600?text=Edificio+Hermano+Lobo+I+y+II",
+    "Descripción": "En ambos proyectos se obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente lograron la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 3,
+    "Año": "",
+    "Nombre": "Edificio Los Recuerdos",
+    "Ubicación": "San Borja",
+    "Cliente": "JN Construcciones e Inversiones S.A.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Los+Recuerdos",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 4,
+    "Año": "",
+    "Nombre": "Edificio Donizetti",
+    "Ubicación": "San Borja",
+    "Cliente": "Inversiones Crecer SAC",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Donizetti",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 5,
+    "Año": "",
+    "Nombre": "Edificio Green Boulevard",
+    "Ubicación": "San Borja",
+    "Cliente": "Empire Inversiones SAC",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Green+Boulevard",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 6,
+    "Año": "",
+    "Nombre": "Edificio La Pradera",
+    "Ubicación": "San Borja",
+    "Cliente": "Construcciones e Inmobiliaria Serenzza",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+La+Pradera",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 7,
+    "Año": "",
+    "Nombre": "Edificio El Dorado",
+    "Ubicación": "San Borja",
+    "Cliente": "JN Construcciones e Inversiones S.A.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+El+Dorado",
+    "Descripción": ""
+  },
+  {
+    "id": 8,
+    "Año": "",
+    "Nombre": "Edificio Galeón",
+    "Ubicación": "San Borja",
+    "Cliente": "JN Construcciones e Inversiones S.A.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Galeón",
+    "Descripción": ""
+  },
+  {
+    "id": 9,
+    "Año": "",
+    "Nombre": "Edificio Trinidad",
+    "Ubicación": "San Borja",
+    "Cliente": "Galeón Inmobiliaria",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Trinidad",
+    "Descripción": ""
+  },
+  {
+    "id": 10,
+    "Año": "",
+    "Nombre": "Edificio Gaetano",
+    "Ubicación": "San Borja",
+    "Cliente": "Constructora Inmobiliaria JL S.A.C.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Gaetano",
+    "Descripción": "El proyecto CERTIFICACIÓN EDGE, actualmente está en proceso de la CERTIFICACIÓN POST-CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 11,
+    "Año": "",
+    "Nombre": "Edificio El Dorado II",
+    "Ubicación": "San Borja",
+    "Cliente": "JN Construcciones e Inversiones S.A.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+El+Dorado+II",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 12,
+    "Año": "",
+    "Nombre": "Edificio Calle 05",
+    "Ubicación": "San Borja",
+    "Cliente": "ARA INGENIEROS",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Calle+05",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE."
+  },
+  {
+    "id": 13,
+    "Año": "",
+    "Nombre": "Edificio Via Boyle",
+    "Ubicación": "San Borja",
+    "Cliente": "Origen Inmobiliaria",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Via+Boyle",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 14,
+    "Año": "",
+    "Nombre": "Edificio Beethoven",
+    "Ubicación": "San Borja",
+    "Cliente": "Inversiones Crecer",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Beethoven",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
+  },
+  {
+    "id": 15,
+    "Año": "",
+    "Nombre": "Edificio Wiese",
+    "Ubicación": "Santiago de Surco",
+    "Cliente": "Make Inmobiliaria",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Wiese",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE."
+  },
+  {
+    "id": 16,
+    "Año": "",
+    "Nombre": "Edificio Leon García",
+    "Ubicación": "Santiago de Surco",
+    "Cliente": "RGS Constructores S.A.C.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Leon+García",
+    "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
+  },
+  {
+    "id": 17,
+    "Año": "",
+    "Nombre": "Edificio Millet 173",
+    "Ubicación": "",
+    "Cliente": "Grupo BA Contratistas Generales S.A.C.",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Millet+173",
+    "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE."
+  },
+  {
+    "id": 18,
+    "Año": "",
+    "Nombre": "Edificio La Floresta Boulevard",
+    "Ubicación": "",
+    "Cliente": "",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+La+Floresta+Boulevard",
+    "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
+  },
+  {
+    "id": 19,
+    "Año": "",
+    "Nombre": "Edificio Tomas Marsano",
+    "Ubicación": "",
+    "Cliente": "",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Tomas+Marsano",
+    "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
+  },
+  {
+    "id": 20,
+    "Año": "",
+    "Nombre": "Edificio Las Dalias",
+    "Ubicación": "",
+    "Cliente": "",
+    "Imagen": "https://placehold.co/600x400?text=Edificio+Las+Dalias",
+    "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
+  }
+]
