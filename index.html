@@ -9,6 +9,8 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
 
+    <link rel="stylesheet" href="stylesheet.css" />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
@@ -19,6 +21,12 @@
       *:after {
         box-sizing: border-box;
       }
+
+      main {
+        font-family: clan_proregular, "Gill Sans", "Gill Sans MT", Calibri,
+          "Trebuchet MS", sans-serif;
+      }
+
       .proyecto {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -71,6 +79,30 @@
         <h2>Asesorías EDGE</h2>
         <div class="">
           <template x-for="(proyecto, index) in proyectos">
+            <div class="proyecto">
+              <div class="image-wrapper">
+                <img :src="proyecto.Imagen" alt="" />
+              </div>
+              <div class="proyecto-info">
+                <p class="proyecto-nombre">
+                  <span x-text="proyecto.Nombre">Nombre</span> en
+                  <span x-text="proyecto.Ubicación">Ubicación</span> de
+                  <span x-text="proyecto.Cliente">Cliente</span>
+                </p>
+                <p x-text="proyecto.Descripción">Descripción</p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+      <!-- -->
+      <div
+        x-data="{ proyectos2: []}"
+        x-init="proyectos2 = await (await fetch('./auditorias.json')).json()"
+      >
+        <h2>Auditorias EDGE</h2>
+        <div class="">
+          <template x-for="(proyecto, index) in proyectos2">
             <div class="proyecto">
               <div class="image-wrapper">
                 <img :src="proyecto.Imagen" alt="" />
