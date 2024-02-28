@@ -9,68 +9,48 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
 
-    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
 
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
     ></script>
-    <style>
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
-
-      main {
-        font-family: clan_proregular, "Gill Sans", "Gill Sans MT", Calibri,
-          "Trebuchet MS", sans-serif;
-      }
-
-      .proyecto {
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        gap: 15px;
-        margin-bottom: 30px;
-        .proyecto-nombre {
-          font-weight: 600;
-          margin-bottom: 0;
-        }
-        .image-wrapper {
-          width: 200px;
-          height: auto;
-          overflow: hidden;
-          aspect-ratio: 4/3;
-          border: 1px solid red;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-      img {
-        max-width: 125%;
-        height: auto;
-        object-fit: contain;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <main class="container">
       <h1>Arq. Nelly Alexandra Cúneo Galdós</h1>
       <p>CAP 8942</p>
       <p>
-        Arquitecta colegiada, titulada de la Universidad Ricardo Palma con un
-        Máster en Medio Ambiente y Arquitectura Bioclimática de la Universidad
-        Politécnica de Madrid. Experiencia como Green Building Consultant para
-        la Corporación Financiera Internacional (IFC) a cargo de dar apoyo
-        técnico y difusión sobre la certificación EDGE en Perú. EDGE Expert y
-        Edge Auditor aprobada, lo cual permite un tiempo de revision mas corto
-        en los proyectos y alcanzar la certicacion en tiempo menor. Asmplia
-        experiencia también como asesora en proyectos de seguridad relacionados
-        al tema de protección a la vida, basados en la aplicación del código
-        NFPA 101 y el Reglamento Nacional de Edificaciones. EDGE Expert y Edge
-        Auditor aprobada.
+        <strong>Arquitecta colegiada</strong>, titulada de la
+        <strong>Universidad Ricardo Palma</strong> con un
+        <strong>Máster en Medio Ambiente y Arquitectura Bioclimática</strong> de
+        la <strong> Universidad Politécnica de Madrid </strong>. Experiencia
+        como Green Building Consultant para la
+        <strong>Corporación Financiera Internacional (IFC)</strong> a cargo de
+        dar apoyo técnico y difusión sobre la certificación
+        <srtong>EDGE</srtong> en Perú.
+        <strong> EDGE Expert y Edge Auditor aprobada </strong>, lo cual permite
+        un tiempo de revision mas corto en los proyectos y alcanzar la
+        certicacion en tiempo menor. Asmplia experiencia también como asesora en
+        proyectos de seguridad relacionados al tema de protección a la vida,
+        basados en la aplicación del código <strong>NFPA 101</strong> y el
+        <strong>Reglamento Nacional de Edificaciones</strong>. Anteriormemte
+        acreditada <strong>LEED AP BD+C</strong> y parte de la mesa de trabajo
+        LEED liderado por el <strong>Perú Green Building Council</strong>.
       </p>
+      <img
+        src="./assets/images/Logo-NFPA.webp"
+        alt="NFPA"
+        style="width: 100px"
+      />
+      <img
+        src="./assets/images/Logo-Edge.jpg"
+        alt="Edge"
+        style="width: 100px"
+      />
+      <img src="./assets/images/Logo-CAP.png" alt="CAP" style="width: 100px" />
+
       <!--  -->
       <div
         x-data="{ proyectos: []}"
@@ -80,7 +60,7 @@
         <div class="">
           <template x-for="(proyecto, index) in proyectos">
             <div class="proyecto">
-              <div class="image-wrapper">
+              <div class="image-wrapper" x-show="proyecto.Imagen">
                 <img :src="proyecto.Imagen" alt="" />
               </div>
               <div class="proyecto-info">
@@ -104,7 +84,7 @@
         <div class="">
           <template x-for="(proyecto, index) in proyectos2">
             <div class="proyecto">
-              <div class="image-wrapper">
+              <div class="image-wrapper" x-show="proyecto.Imagen">
                 <img :src="proyecto.Imagen" alt="" />
               </div>
               <div class="proyecto-info">
@@ -114,6 +94,22 @@
                   <span x-text="proyecto.Cliente">Cliente</span>
                 </p>
                 <p x-text="proyecto.Descripción">Descripción</p>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+      <!--  -->
+      <div
+        x-data="{ clientes: []}"
+        x-init="clientes = await (await fetch('./clientes.json')).json()"
+      >
+        <h2>Clientes</h2>
+        <div class="clientes">
+          <template x-for="(cliente, index) in clientes">
+            <div class="cliente" x-show="cliente.Imagen">
+              <div class="image-wrapper">
+                <img :src="cliente.Imagen" x-bind:alt="cliente.Nombre" />
               </div>
             </div>
           </template>

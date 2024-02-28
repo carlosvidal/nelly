@@ -5,7 +5,7 @@
     "Nombre": "Edificio Partisano",
     "Ubicación": "Cusco",
     "Cliente": "Damantium",
-    "Imagen": "./images/Edificio-Partisano.jpg",
+    "Imagen": "./assets/images/Edificio-Partisano.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE. PRIMERA CERTIFICACIÓN ADUTADA EDGE EN CUSCO."
   },
   {
@@ -14,7 +14,7 @@
     "Nombre": "Edificio Libitum",
     "Ubicación": "Santiago de Surco",
     "Cliente": "Nexo Inmobiliaria",
-    "Imagen": "./images/Edificio-Libitum.jpg",
+    "Imagen": "./assets/images/Edificio-Libitum.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -23,7 +23,7 @@
     "Nombre": "Edificio San Borja Norte",
     "Ubicación": "San Borja",
     "Cliente": "Binda Ingenieros",
-    "Imagen": "./images/Edificio-San-Borja-Norte.jpg",
+    "Imagen": "./assets/images/Edificio-San-Borja-Norte.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE, posteriormente se realizó la AUDITORIA FINAL EDGE."
   },
   {
@@ -32,7 +32,7 @@
     "Nombre": "Edificio Toscanini",
     "Ubicación": "San Borja",
     "Cliente": "Construcción Mallorca",
-    "Imagen": "./images/Edificio-Toscanini.jpg",
+    "Imagen": "./assets/images/Edificio-Toscanini.jpg",
     "Descripción": "El proyecto realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -40,8 +40,8 @@
     "Año": "",
     "Nombre": "Centro Comercial Puruchuco",
     "Ubicación": "Ate",
-    "Cliente": "EDIZITY y Real Plaza",
-    "Imagen": "./images/Centro-Comercial-Puruchuco.jpg",
+    "Cliente": "EFIZITY y Real Plaza",
+    "Imagen": "./assets/images/Centro-Comercial-Puruchuco.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE, posteriormente se realizó la AUDITORIA FINAL EDGE."
   },
   {
@@ -50,7 +50,7 @@
     "Nombre": "Vivienda Sostenible",
     "Ubicación": "San Borja",
     "Cliente": "Constructora Inmobiliaria Inversiones Imperio SAC",
-    "Imagen": "./images/Vivienda-Sostenible.jpg",
+    "Imagen": "./assets/images/Vivienda-Sostenible.jpg",
     "Descripción": "El proyecto realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -59,7 +59,7 @@
     "Nombre": "Oficina Deposeguro",
     "Ubicación": "La Victoria",
     "Cliente": "Deposeguro",
-    "Imagen": "./images/Oficina-Deposeguro.jpg",
+    "Imagen": "./assets/images/Oficina-Deposeguro.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE, posteriormente se realizó la AUDITORIA FINAL EDGE."
   },
   {
@@ -68,7 +68,7 @@
     "Nombre": "Multifamiliar Cayma",
     "Ubicación": "Cayme, Arequipa",
     "Cliente": "",
-    "Imagen": "./images/Multifamiliar-Cayma.jpg",
+    "Imagen": "./assets/images/Edificio-Multifamiliar-Cayma.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -77,7 +77,7 @@
     "Nombre": "Edificio Multifamiliar José Gonzales",
     "Ubicación": "Miraflores",
     "Cliente": "Grupo Caster",
-    "Imagen": "./images/Edificio-Multifamiliar-José-Gonzales.jpg",
+    "Imagen": "./assets/images/Edificio-Multifamiliar-José-Gonzales.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -86,7 +86,7 @@
     "Nombre": "Edificio Multifamiliar Quiroga",
     "Ubicación": "",
     "Cliente": "Gestión Colaborativa",
-    "Imagen": "./images/Edificio-Multifamiliar-Quiroga.jpg",
+    "Imagen": "./assets/images/Edificio-Multifamiliar-Quiroga.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -95,7 +95,7 @@
     "Nombre": "Intitower",
     "Ubicación": "Santiago de Surco",
     "Cliente": "Vitain Desarrolladora 22 S.A.C.",
-    "Imagen": "./images/Intitower.jpg",
+    "Imagen": "./assets/images/Intitower.jpg",
     "Descripción": "Actalmente se encuentra en proceso de la de AUDITORIA para la etapa PRELIMINAR EDGE."
   },
   {
@@ -104,7 +104,7 @@
     "Nombre": "Oficinas OL",
     "Ubicación": "Lince",
     "Cliente": "Grupo OL",
-    "Imagen": "./images/Oficinas-OL.jpg",
+    "Imagen": "./assets/images/Oficinas-OL.jpg",
     "Descripción": "Se realizó la AUDITORIA FINAL EDGE. Lograrán a la CERTIFICACIÓN ADVANCE, ya que pasaron más del 40% en ahorros de energía."
   },
   {
@@ -113,7 +113,7 @@
     "Nombre": "Centro de Empleo Chiclayo",
     "Ubicación": "Chiclayo",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./images/Centro-de-Empleo-Chiclayo.jpg",
+    "Imagen": "./assets/images/Centro-de-Empleo-Chiclayo.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -122,7 +122,7 @@
     "Nombre": "Centro de Empleo Ica",
     "Ubicación": "Ica",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./images/Centro-de-Empleo-Ica.jpg",
+    "Imagen": "./assets/images/Centro-de-Empleo-Ica.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -131,7 +131,7 @@
     "Nombre": "Centro de Empleo La Libertad",
     "Ubicación": "La Libertad",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./images/Centro-de-Empleo-La-Libertad.jpg",
+    "Imagen": "./assets/images/Centro-de-Empleo-La-Libertad.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -140,7 +140,7 @@
     "Nombre": "Centro de Empleo Arequipa",
     "Ubicación": "Arequipa",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./images/Centro-de-Empleo-Arequipa.jpg",
+    "Imagen": "./assets/images/Centro-de-Empleo-Arequipa.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -149,7 +149,7 @@
     "Nombre": "Centro de Empleo San Martín",
     "Ubicación": "San Martín",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./images/Centro-de-Empleo-San-Martín.jpg",
+    "Imagen": "./assets/images/Centro-de-Empleo-San-Martín.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   }
 ]

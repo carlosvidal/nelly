@@ -5,7 +5,7 @@
     "Nombre": "Edificio Mariscal Castilla",
     "Ubicación": "San Borja",
     "Cliente": "Pabott Inversiones SAC",
-    "Imagen": "./images/Edificio-Mariscal-Castilla.jpg",
+    "Imagen": "./assets/images/Edificio-Mariscal-Castilla.jpg",
     "Descripción": "Se brindó apoyo al cliente para el logro de la CERTIFICACIÓN PRELIMINAR EDGE, mediante la aplicación de estrategias al proyecto referentes a Energía, Agua y Materiales. Posteriormente logró la CERTIFICACIÓN POST-CONSTRUCCIÓN"
   },
   {
@@ -14,7 +14,7 @@
     "Nombre": "Edificio Hermano Lobo I y II",
     "Ubicación": "San Borja",
     "Cliente": "JN Construcciones e Inversiones S.A.",
-    "Imagen": "./images/Edificio-Hermano-Lobo-I-y-II.jpg",
+    "Imagen": "./assets/images/Edificio-Hermano-Lobo-I-y-II.jpg",
     "Descripción": "En ambos proyectos se obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente lograron la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -23,7 +23,7 @@
     "Nombre": "Edificio Los Recuerdos",
     "Ubicación": "San Borja",
     "Cliente": "JN Construcciones e Inversiones S.A.",
-    "Imagen": "./images/Edificio-Los-Recuerdos.jpg",
+    "Imagen": "./assets/images/Edificio-Los-Recuerdos.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -32,7 +32,7 @@
     "Nombre": "Edificio Donizetti",
     "Ubicación": "San Borja",
     "Cliente": "Inversiones Crecer SAC",
-    "Imagen": "./images/Edificio-Donizetti.jpg",
+    "Imagen": "",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -41,7 +41,7 @@
     "Nombre": "Edificio Green Boulevard",
     "Ubicación": "San Borja",
     "Cliente": "Empire Inversiones SAC",
-    "Imagen": "./images/Edificio-Green-Boulevard.jpg",
+    "Imagen": "./assets/images/Edificio-Green-Boulevard.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -50,7 +50,7 @@
     "Nombre": "Edificio La Pradera",
     "Ubicación": "San Borja",
     "Cliente": "Construcciones e Inmobiliaria Serenzza",
-    "Imagen": "./images/Edificio-La-Pradera.jpg",
+    "Imagen": "./assets/images/Edificio-La-Pradera.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -59,7 +59,7 @@
     "Nombre": "Edificio El Dorado",
     "Ubicación": "San Borja",
     "Cliente": "JN Construcciones e Inversiones S.A.",
-    "Imagen": "./images/Edificio-El-Dorado.jpg",
+    "Imagen": "./assets/images/Edificio-El-Dorado.jpg",
     "Descripción": ""
   },
   {
@@ -68,7 +68,7 @@
     "Nombre": "Edificio Galeón",
     "Ubicación": "San Borja",
     "Cliente": "JN Construcciones e Inversiones S.A.",
-    "Imagen": "./images/Edificio-Galeón.jpg",
+    "Imagen": "./assets/images/Edificio-Galeón.jpg",
     "Descripción": ""
   },
   {
@@ -77,7 +77,7 @@
     "Nombre": "Edificio Trinidad",
     "Ubicación": "San Borja",
     "Cliente": "Galeón Inmobiliaria",
-    "Imagen": "./images/Edificio-Trinidad.jpg",
+    "Imagen": "./assets/images/Edificio-Trinidad.jpg",
     "Descripción": ""
   },
   {
@@ -86,7 +86,7 @@
     "Nombre": "Edificio Gaetano",
     "Ubicación": "San Borja",
     "Cliente": "Constructora Inmobiliaria JL S.A.C.",
-    "Imagen": "./images/Edificio-Gaetano.jpg",
+    "Imagen": "./assets/images/Edificio-Gaetano.jpg",
     "Descripción": "El proyecto CERTIFICACIÓN EDGE, actualmente está en proceso de la CERTIFICACIÓN POST-CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -95,7 +95,7 @@
     "Nombre": "Edificio El Dorado II",
     "Ubicación": "San Borja",
     "Cliente": "JN Construcciones e Inversiones S.A.",
-    "Imagen": "./images/Edificio-El-Dorado-II.jpg",
+    "Imagen": "./assets/images/Edificio-El-Dorado-II.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -104,7 +104,7 @@
     "Nombre": "Edificio Calle 05",
     "Ubicación": "San Borja",
     "Cliente": "ARA INGENIEROS",
-    "Imagen": "./images/Edificio-Calle-05.jpg",
+    "Imagen": "./assets/images/Edificio-Calle-05.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE."
   },
   {
@@ -113,7 +113,7 @@
     "Nombre": "Edificio Via Boyle",
     "Ubicación": "San Borja",
     "Cliente": "Origen Inmobiliaria",
-    "Imagen": "./images/Edificio-Via-Boyle.jpg",
+    "Imagen": "./assets/images/Edificio-Via-Boyle.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -122,7 +122,7 @@
     "Nombre": "Edificio Beethoven",
     "Ubicación": "San Borja",
     "Cliente": "Inversiones Crecer",
-    "Imagen": "./images/Edificio-Beethoven.jpg",
+    "Imagen": "./assets/images/Edificio-Beethoven.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE, posteriormente logró la CERTIFICACIÓN POST- CONSTRUCCIÓN FINAL EDGE."
   },
   {
@@ -131,7 +131,7 @@
     "Nombre": "Edificio Wiese",
     "Ubicación": "Santiago de Surco",
     "Cliente": "Make Inmobiliaria",
-    "Imagen": "./images/Edificio-Wiese.jpg",
+    "Imagen": "./assets/images/Edificio-Wiese.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE."
   },
   {
@@ -140,43 +140,43 @@
     "Nombre": "Edificio Leon García",
     "Ubicación": "Santiago de Surco",
     "Cliente": "RGS Constructores S.A.C.",
-    "Imagen": "./images/Edificio-Leon-García.jpg",
+    "Imagen": "./assets/images/Edificio-Leon-García.jpg",
     "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
   },
   {
     "id": 17,
     "Año": "",
     "Nombre": "Edificio Millet 173",
-    "Ubicación": "",
+    "Ubicación": "San Borja",
     "Cliente": "Grupo BA Contratistas Generales S.A.C.",
-    "Imagen": "./images/Edificio-Millet-173.jpg",
+    "Imagen": "./assets/images/Edificio-Millet-173.jpg",
     "Descripción": "El proyecto obtuvo la CERTIFICACIÓN PRELIMINAR EDGE."
   },
   {
     "id": 18,
     "Año": "",
     "Nombre": "Edificio La Floresta Boulevard",
-    "Ubicación": "",
-    "Cliente": "",
-    "Imagen": "./images/Edificio-La-Floresta-Boulevard.jpg",
+    "Ubicación": "San Borja",
+    "Cliente": "Empire Inversiones SAC",
+    "Imagen": "./assets/images/Edificio-La-Floresta-Boulevard.jpg",
     "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
   },
   {
     "id": 19,
     "Año": "",
     "Nombre": "Edificio Tomas Marsano",
-    "Ubicación": "",
-    "Cliente": "",
-    "Imagen": "./images/Edificio-Tomas-Marsano.jpg",
+    "Ubicación": "Miraflores",
+    "Cliente": "Elsvan",
+    "Imagen": "./assets/images/Edificio-Tomas-Marsano.jpg",
     "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
   },
   {
     "id": 20,
     "Año": "",
     "Nombre": "Edificio Las Dalias",
-    "Ubicación": "",
-    "Cliente": "",
-    "Imagen": "./images/Edificio-Las-Dalias.jpg",
+    "Ubicación": "Santiago de Surco",
+    "Cliente": "Make Inmobiliaria",
+    "Imagen": "./assets/images/Edificio-Las-Dalias.jpg",
     "Descripción": "Actualmente esta en proceso para la CERTIFICACIÓN PRELIMINAR EDGE."
   }
 ]

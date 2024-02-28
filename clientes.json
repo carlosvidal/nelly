@@ -1,0 +1,102 @@
+[
+  {
+    "Nombre": "ARA INGENIEROS",
+    "Imagen": "./assets/images/Logo-ARA-Ingenieros.png"
+  },
+  {
+    "Nombre": "Binda Ingenieros",
+    "Imagen": "./assets/images/Logo-Binda.png"
+  },
+  {
+    "Nombre": "Construcción Mallorca",
+    "Imagen": "./assets/images/Logo-Constructora-Mallorca.png"
+  },
+  {
+    "Nombre": "Constructora e Inmobiliaria Serenzza",
+    "Imagen": ""
+  },
+  {
+    "Nombre": "Constructora Inmobiliaria Inversiones Imperio SAC",
+    "Imagen": "./assets/images/Logo-Inversiones-Imperio.png"
+  },
+  {
+    "Nombre": "Constructora Inmobiliaria JL S.A.C.",
+    "Imagen": "./assets/images/Logo-Constructora-Inmobiliaria-JL.png"
+  },
+  {
+    "Nombre": "Damantium",
+    "Imagen": "./assets/images/Logo-Damantium.png"
+  },
+  {
+    "Nombre": "Deposeguro",
+    "Imagen": "./assets/images/Logo-Depo-Seguro.jpg"
+  },
+  {
+    "Nombre": "EFIZITY",
+    "Imagen": "./assets/images/Logo-Efiziti.png"
+  },
+  {
+    "Nombre": "Empire Inversiones SAC",
+    "Imagen": "./assets/images/Logo-Green-Boulevar.png"
+  },
+  {
+    "Nombre": "Galeón Inmobiliaria",
+    "Imagen": "./assets/images/Logo-Galeón-Inmobiliaria.png"
+  },
+  {
+    "Nombre": "Gestión Colaborativa",
+    "Imagen": "./assets/images/Logo-Gestión-Colaborativa.png"
+  },
+  {
+    "Nombre": "Grupo BA Contratistas Generales S.A.C.",
+    "Imagen": "./assets/images/Logo-Grupo-BA.png"
+  },
+  {
+    "Nombre": "Grupo Caster",
+    "Imagen": "./assets/images/Logo-Grupo-Caster.png"
+  },
+  {
+    "Nombre": "Grupo OL",
+    "Imagen": "./assets/images/Logo-Grupo-OL.png"
+  },
+  {
+    "Nombre": "Inversiones Crecer SAC",
+    "Imagen": "./assets/images/Logo-Inversiones-Crecer.png"
+  },
+  {
+    "Nombre": "JN Construcciones e Inversiones S.A.",
+    "Imagen": "./assets/images/Logo-JN-Construcciones-e-Inversiones.png"
+  },
+  {
+    "Nombre": "Make Inmobiliaria",
+    "Imagen": "./assets/images/Logo-MAKE.png"
+  },
+  {
+    "Nombre": "Ministerio del Trabajo",
+    "Imagen": "./assets/images/Logo-MTPE.png"
+  },
+  {
+    "Nombre": "Nexo Inmobiliaria",
+    "Imagen": "./assets/images/Logo-Nexo-Inmobiliario.png"
+  },
+  {
+    "Nombre": "Origen Inmobiliaria",
+    "Imagen": "./assets/images/Logo-Origen.png"
+  },
+  {
+    "Nombre": "Pabott Inversiones SAC",
+    "Imagen": "./assets/images/Logo-Pabott-Inversiones.png"
+  },
+  {
+    "Nombre": "Real Plaza",
+    "Imagen": "./assets/images/Logo-Real-Plaza.png"
+  },
+  {
+    "Nombre": "RGS Constructores S.A.C.",
+    "Imagen": "./assets/images/Logo-RGS.png"
+  },
+  {
+    "Nombre": "Elsvan",
+    "Imagen": "./assets/images/Logo-Elsvan.png"
+  }
+]
