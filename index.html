@@ -20,36 +20,88 @@
   <body>
     <main class="container">
       <h1>Arq. Nelly Alexandra Cúneo Galdós</h1>
-      <p>CAP 8942</p>
+      <div class="areas-de-experiencia">
+        <div>
+          <img
+            src="./assets/images/Logo-CAP.png"
+            alt="CAP"
+            style="width: 100px"
+          /><br />CAP 8942
+        </div>
+        <div>
+          <img
+            src="./assets/images/Logo-Edge.svg"
+            alt="Edge"
+            style="width: 120px"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/images/Logo-USGBC.png"
+            alt="USGBC"
+            style="width: 100px"
+          />
+          <img
+            src="./assets/images/Logo-LEED-AP-BD+C.jpg"
+            alt="CAP"
+            style="width: 80px"
+          />
+        </div>
+        <div>
+          <img
+            src="./assets/images/Logo-NFPA.webp"
+            alt="NFPA"
+            style="width: 80px"
+          />
+        </div>
+      </div>
       <p>
         <strong>Arquitecta colegiada</strong>, titulada de la
         <strong>Universidad Ricardo Palma</strong> con un
         <strong>Máster en Medio Ambiente y Arquitectura Bioclimática</strong> de
-        la <strong> Universidad Politécnica de Madrid </strong>. Experiencia
-        como Green Building Consultant para la
+        la <strong> Universidad Politécnica de Madrid </strong>.
+      </p>
+      <p>
+        Fuí Green Building Consultant para la
         <strong>Corporación Financiera Internacional (IFC)</strong> a cargo de
         dar apoyo técnico y difusión sobre la certificación
         <srtong>EDGE</srtong> en Perú.
+      </p>
+      <p>
         <strong> EDGE Expert y Edge Auditor aprobada </strong>, lo cual permite
         un tiempo de revision mas corto en los proyectos y alcanzar la
-        certicacion en tiempo menor. Asmplia experiencia también como asesora en
-        proyectos de seguridad relacionados al tema de protección a la vida,
-        basados en la aplicación del código <strong>NFPA 101</strong> y el
-        <strong>Reglamento Nacional de Edificaciones</strong>. Anteriormemte
-        acreditada <strong>LEED AP BD+C</strong> y parte de la mesa de trabajo
-        LEED liderado por el <strong>Perú Green Building Council</strong>.
+        certicacion en menor tiempo.
       </p>
-      <img
-        src="./assets/images/Logo-NFPA.webp"
-        alt="NFPA"
-        style="width: 100px"
-      />
-      <img
-        src="./assets/images/Logo-Edge.jpg"
-        alt="Edge"
-        style="width: 100px"
-      />
-      <img src="./assets/images/Logo-CAP.png" alt="CAP" style="width: 100px" />
+      <p>
+        Amplia experiencia como asesora en proyectos de seguridad relacionados
+        al tema de protección a la vida, basados en la aplicación del código
+        <strong>NFPA 101</strong> y el
+        <strong>Reglamento Nacional de Edificaciones</strong>.
+      </p>
+      <p>
+        Anteriormemte acreditada <strong>LEED AP BD+C</strong> y parte de la
+        mesa de trabajo LEED liderado por el
+        <strong>Perú Green Building Council</strong>.
+      </p>
+
+      <div class="hightlights">
+        <div class="hightlight">
+          <span class="qty" akhi="40">0</span>
+          Proyectos EDGE
+        </div>
+        <div class="hightlight">
+          <span class="qty" akhi="19">0</span>
+          Certificaciones Preliminares
+        </div>
+        <div class="hightlight">
+          <span class="qty" akhi="12">0</span>
+          Certificaciones Finales
+        </div>
+        <div class="hightlight">
+          <span class="qty" akhi="17">0</span>
+          Proyectos Auditados
+        </div>
+      </div>
 
       <!--  -->
       <div
@@ -57,10 +109,15 @@
         x-init="proyectos = await (await fetch('./asesorias.json')).json()"
       >
         <h2>Asesorías EDGE</h2>
-        <div class="">
+        <div class="proyectos">
           <template x-for="(proyecto, index) in proyectos">
             <div class="proyecto">
-              <div class="image-wrapper" x-show="proyecto.Imagen">
+              <div
+                class="image-wrapper"
+                x-show="proyecto.Imagen"
+                x-bind:alt="proyecto.Nombre"
+                x-bind:title="proyecto.Nombre"
+              >
                 <img :src="proyecto.Imagen" alt="" />
               </div>
               <div class="proyecto-info">
@@ -69,7 +126,9 @@
                   <span x-text="proyecto.Ubicación">Ubicación</span> de
                   <span x-text="proyecto.Cliente">Cliente</span>
                 </p>
-                <p x-text="proyecto.Descripción">Descripción</p>
+                <p x-text="proyecto.Descripción" class="proyecto-descripcion">
+                  Descripción
+                </p>
               </div>
             </div>
           </template>
@@ -81,10 +140,15 @@
         x-init="proyectos2 = await (await fetch('./auditorias.json')).json()"
       >
         <h2>Auditorias EDGE</h2>
-        <div class="">
+        <div class="proyectos">
           <template x-for="(proyecto, index) in proyectos2">
             <div class="proyecto">
-              <div class="image-wrapper" x-show="proyecto.Imagen">
+              <div
+                class="image-wrapper"
+                x-show="proyecto.Imagen"
+                x-bind:alt="proyecto.Nombre"
+                x-bind:title="proyecto.Nombre"
+              >
                 <img :src="proyecto.Imagen" alt="" />
               </div>
               <div class="proyecto-info">
@@ -93,7 +157,9 @@
                   <span x-text="proyecto.Ubicación">Ubicación</span> de
                   <span x-text="proyecto.Cliente">Cliente</span>
                 </p>
-                <p x-text="proyecto.Descripción">Descripción</p>
+                <p x-text="proyecto.Descripción" class="proyecto-descripcion">
+                  Descripción
+                </p>
               </div>
             </div>
           </template>
@@ -109,12 +175,37 @@
           <template x-for="(cliente, index) in clientes">
             <div class="cliente" x-show="cliente.Imagen">
               <div class="image-wrapper">
-                <img :src="cliente.Imagen" x-bind:alt="cliente.Nombre" />
+                <img
+                  :src="cliente.Imagen"
+                  x-bind:alt="cliente.Nombre"
+                  x-bind:title="cliente.Nombre"
+                />
               </div>
             </div>
           </template>
         </div>
       </div>
     </main>
+    <script>
+      const counters = document.querySelectorAll(".qty");
+      const speed = 2000;
+
+      counters.forEach((counter) => {
+        const animate = () => {
+          const value = +counter.getAttribute("akhi");
+          const data = +counter.innerText;
+
+          const time = value / speed;
+          if (data < value) {
+            counter.innerText = Math.ceil(data + time);
+            setTimeout(animate, 1);
+          } else {
+            counter.innerText = value;
+          }
+        };
+
+        animate();
+      });
+    </script>
   </body>
 </html>
