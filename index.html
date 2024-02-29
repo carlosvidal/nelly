@@ -20,7 +20,7 @@
   <body>
     <main class="container">
       <h1>Arq. Nelly Alexandra Cúneo Galdós</h1>
-      <div class="areas-de-experiencia">
+      <section class="areas-de-experiencia">
         <div>
           <img
             src="./assets/images/Logo-CAP.png"
@@ -54,37 +54,39 @@
             style="width: 80px"
           />
         </div>
-      </div>
-      <p>
-        <strong>Arquitecta colegiada</strong>, titulada de la
-        <strong>Universidad Ricardo Palma</strong> con un
-        <strong>Máster en Medio Ambiente y Arquitectura Bioclimática</strong> de
-        la <strong> Universidad Politécnica de Madrid </strong>.
-      </p>
-      <p>
-        Fuí Green Building Consultant para la
-        <strong>Corporación Financiera Internacional (IFC)</strong> a cargo de
-        dar apoyo técnico y difusión sobre la certificación
-        <srtong>EDGE</srtong> en Perú.
-      </p>
-      <p>
-        <strong> EDGE Expert y Edge Auditor aprobada </strong>, lo cual permite
-        un tiempo de revision mas corto en los proyectos y alcanzar la
-        certicacion en menor tiempo.
-      </p>
-      <p>
-        Amplia experiencia como asesora en proyectos de seguridad relacionados
-        al tema de protección a la vida, basados en la aplicación del código
-        <strong>NFPA 101</strong> y el
-        <strong>Reglamento Nacional de Edificaciones</strong>.
-      </p>
-      <p>
-        Anteriormemte acreditada <strong>LEED AP BD+C</strong> y parte de la
-        mesa de trabajo LEED liderado por el
-        <strong>Perú Green Building Council</strong>.
-      </p>
+      </section>
+      <section>
+        <p>
+          <strong>Arquitecta colegiada</strong>, titulada de la
+          <strong>Universidad Ricardo Palma</strong> con un
+          <strong>Máster en Medio Ambiente y Arquitectura Bioclimática</strong>
+          de la <strong> Universidad Politécnica de Madrid </strong>.
+        </p>
+        <p>
+          Fuí Green Building Consultant para la
+          <strong>Corporación Financiera Internacional (IFC)</strong> a cargo de
+          dar apoyo técnico y difusión sobre la certificación
+          <srtong>EDGE</srtong> en Perú.
+        </p>
+        <p>
+          <strong> EDGE Expert y Edge Auditor aprobada </strong>, lo cual
+          permite un tiempo de revision mas corto en los proyectos y alcanzar la
+          certicacion en menor tiempo.
+        </p>
+        <p>
+          Amplia experiencia como asesora en proyectos de seguridad relacionados
+          al tema de protección a la vida, basados en la aplicación del código
+          <strong>NFPA 101</strong> y el
+          <strong>Reglamento Nacional de Edificaciones</strong>.
+        </p>
+        <p>
+          Anteriormemte acreditada <strong>LEED AP BD+C</strong> y parte de la
+          mesa de trabajo LEED liderado por el
+          <strong>Perú Green Building Council</strong>.
+        </p>
+      </section>
 
-      <div class="hightlights">
+      <section class="hightlights">
         <div class="hightlight">
           <span class="qty" akhi="40">0</span>
           Proyectos EDGE
@@ -101,10 +103,10 @@
           <span class="qty" akhi="17">0</span>
           Proyectos Auditados
         </div>
-      </div>
+      </section>
 
       <!--  -->
-      <div
+      <section
         x-data="{ proyectos: []}"
         x-init="proyectos = await (await fetch('./asesorias.json')).json()"
       >
@@ -133,9 +135,9 @@
             </div>
           </template>
         </div>
-      </div>
+      </section>
       <!-- -->
-      <div
+      <section
         x-data="{ proyectos2: []}"
         x-init="proyectos2 = await (await fetch('./auditorias.json')).json()"
       >
@@ -164,9 +166,9 @@
             </div>
           </template>
         </div>
-      </div>
+      </section>
       <!--  -->
-      <div
+      <section
         x-data="{ clientes: []}"
         x-init="clientes = await (await fetch('./clientes.json')).json()"
       >
@@ -184,7 +186,28 @@
             </div>
           </template>
         </div>
-      </div>
+      </section>
+
+      <!--  -->
+      <section class="contacto">
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Nombre: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label
+              >Dirección de correo electrónico:
+              <input type="email" name="email"
+            /></label>
+          </p>
+          <p>
+            <label>Mensaje: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Enviar</button>
+          </p>
+        </form>
+      </section>
     </main>
     <script>
       const counters = document.querySelectorAll(".qty");

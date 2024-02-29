@@ -12,17 +12,22 @@ h1 {
   text-align: center;
 }
 
-.proyecto {
+.proyectos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.proyectos .proyecto {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-bottom: 30px;
 }
-.proyecto .proyecto-nombre {
+.proyectos .proyecto .proyecto-nombre {
   font-weight: 600;
   margin-bottom: 0;
 }
-.proyecto .image-wrapper {
+.proyectos .proyecto .image-wrapper {
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -32,8 +37,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
-img {
+.proyectos .proyecto .image-wrapper img {
   max-width: 125%;
   height: auto;
   object-fit: contain;
@@ -41,7 +45,7 @@ img {
 
 .clientes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   gap: 30px;
 }
@@ -58,9 +62,7 @@ img {
 
 @media (min-width: 992px) {
   .proyectos {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
   }
   .proyectos .proyecto {
     display: flex;
@@ -73,7 +75,6 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
-    margin-bottom: 2rem;
   }
   .hightlights .hightlight {
     display: flex;
@@ -94,7 +95,9 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
+  }
+  .clientes {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
