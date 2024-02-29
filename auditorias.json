@@ -122,7 +122,7 @@
     "Nombre": "Centro de Empleo Ica",
     "Ubicación": "Ica",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./assets/images/Centro-de-Empleo-Ica.jpg",
+    "Imagen": "./assets/images/centro-de-empleo-ica.webp",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   },
   {
@@ -149,7 +149,7 @@
     "Nombre": "Centro de Empleo San Martín",
     "Ubicación": "San Martín",
     "Cliente": "Ministerio del Trabajo",
-    "Imagen": "./assets/images/Centro-de-Empleo-San-Martín.jpg",
+    "Imagen": "./assets/images/Centro-de-Empleo-San-Martin.jpg",
     "Descripción": "Se realizó la AUDITORIA DE LA ETAPA PRELIMINAR EDGE."
   }
 ]
