@@ -8,8 +8,13 @@ main {
   font-family: clan_proregular, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 .proyectos {
@@ -21,7 +26,9 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 30px;
+}
+.proyectos .proyecto p {
+  margin: 0;
 }
 .proyectos .proyecto .proyecto-nombre {
   font-weight: 600;
@@ -60,6 +67,26 @@ h1 {
   max-width: 100%;
 }
 
+.hightlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.hightlights .hightlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 2rem;
+  align-items: center;
+  text-align: center;
+}
+.hightlights .hightlight .qty {
+  display: block;
+  font-size: 3em;
+  font-weight: bold;
+}
+
 @media (min-width: 992px) {
   .proyectos {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -67,28 +94,13 @@ h1 {
   .proyectos .proyecto {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
   }
   .proyectos .proyecto .proyecto-descripcion {
     font-size: 0.8em;
   }
   .hightlights {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-  }
-  .hightlights .hightlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: aliceblue;
-    padding: 2rem;
-    align-items: center;
-    text-align: center;
-  }
-  .hightlights .hightlight .qty {
-    display: block;
-    font-size: 3em;
-    font-weight: bold;
   }
   .areas-de-experiencia {
     display: grid;

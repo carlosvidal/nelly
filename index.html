@@ -6,7 +6,7 @@
     <title>Arquitecta Nelly Cúneo</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.cyan.min.css"
     />
 
     <link rel="stylesheet" href="assets/css/stylesheet.css" />
@@ -111,6 +111,11 @@
         x-init="proyectos = await (await fetch('./asesorias.json')).json()"
       >
         <h2>Asesorías EDGE</h2>
+        <p>
+          Los siguientes proyectos han alcanzado o están en proceso de alcanzar
+          la CERTIFICACIÓN PRELIMINAR EDGE y/o CERTIFICACIÓN POST- CONSTRUCCIÓN
+          FINAL EDGE.
+        </p>
         <div class="proyectos">
           <template x-for="(proyecto, index) in proyectos">
             <div class="proyecto">
@@ -123,14 +128,15 @@
                 <img :src="proyecto.Imagen" alt="" />
               </div>
               <div class="proyecto-info">
-                <p class="proyecto-nombre">
-                  <span x-text="proyecto.Nombre">Nombre</span> en
-                  <span x-text="proyecto.Ubicación">Ubicación</span> de
-                  <span x-text="proyecto.Cliente">Cliente</span>
+                <p class="">
+                  <strong x-text="proyecto.Nombre">Nombre</strong><br />
+                  <span x-text="proyecto.Cliente">Cliente</span><br />
+
+                  <span x-text="proyecto.Ubicación">Ubicación</span>
                 </p>
-                <p x-text="proyecto.Descripción" class="proyecto-descripcion">
+                <!-- <p x-text="proyecto.Descripción" class="proyecto-descripcion">
                   Descripción
-                </p>
+                </p> -->
               </div>
             </div>
           </template>
@@ -142,6 +148,10 @@
         x-init="proyectos2 = await (await fetch('./auditorias.json')).json()"
       >
         <h2>Auditorias EDGE</h2>
+        <p>
+          A los siguientes proyectos se le realizó la AUDITORIA DE LA ETAPA
+          PRELIMINAR EDGE y/o la AUDITORIA FINAL EDGE.
+        </p>
         <div class="proyectos">
           <template x-for="(proyecto, index) in proyectos2">
             <div class="proyecto">
@@ -154,14 +164,14 @@
                 <img :src="proyecto.Imagen" alt="" />
               </div>
               <div class="proyecto-info">
-                <p class="proyecto-nombre">
-                  <span x-text="proyecto.Nombre">Nombre</span> en
-                  <span x-text="proyecto.Ubicación">Ubicación</span> de
-                  <span x-text="proyecto.Cliente">Cliente</span>
+                <p class="">
+                  <strong x-text="proyecto.Nombre">Nombre</strong><br />
+                  <span x-text="proyecto.Cliente">Cliente</span><br />
+                  <span x-text="proyecto.Ubicación">Ubicación</span>
                 </p>
-                <p x-text="proyecto.Descripción" class="proyecto-descripcion">
+                <!-- <p x-text="proyecto.Descripción" class="proyecto-descripcion">
                   Descripción
-                </p>
+                </p> -->
               </div>
             </div>
           </template>
@@ -191,6 +201,7 @@
       <!--  -->
       <section class="contacto">
         <form name="contact" method="POST" data-netlify="true">
+          <h2>Contácto</h2>
           <p>
             <label>Nombre: <input type="text" name="name" /></label>
           </p>

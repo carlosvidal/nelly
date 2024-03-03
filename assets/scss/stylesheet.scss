@@ -9,8 +9,13 @@ main {
     "Trebuchet MS", sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 .proyectos {
@@ -22,7 +27,11 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+    }
+
     .proyecto-nombre {
       font-weight: 600;
       margin-bottom: 0;
@@ -63,6 +72,26 @@ h1 {
   }
 }
 
+.hightlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  .hightlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    .qty {
+      display: block;
+      font-size: 3em;
+      font-weight: bold;
+    }
+  }
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 }
@@ -79,8 +108,7 @@ h1 {
     .proyecto {
       display: flex;
       flex-direction: column;
-      .image-wrapper {
-      }
+      margin-bottom: 30px;
 
       .proyecto-descripcion {
         font-size: 0.8em;
@@ -89,23 +117,7 @@ h1 {
   }
 
   .hightlights {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-    .hightlight {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: aliceblue;
-      padding: 2rem;
-      align-items: center;
-      text-align: center;
-      .qty {
-        display: block;
-        font-size: 3em;
-        font-weight: bold;
-      }
-    }
   }
 
   .areas-de-experiencia {
