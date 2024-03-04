@@ -92,6 +92,11 @@ section {
   }
 }
 
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 }

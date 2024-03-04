@@ -87,6 +87,11 @@ section {
   font-weight: bold;
 }
 
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 @media (min-width: 992px) {
   .proyectos {
     grid-template-columns: 1fr 1fr 1fr 1fr;
