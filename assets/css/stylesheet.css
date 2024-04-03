@@ -9,8 +9,13 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+}
+
+h3 {
+  font-weight: 400;
 }
 
 section {
@@ -67,12 +72,45 @@ section {
   max-width: 100%;
 }
 
+.areas-de-experiencia {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "area-cap area-cap area-edge area-edge" "area-leed area-leed area-nfpa area-nfpa";
+  align-items: center;
+  gap: 30px;
+}
+.areas-de-experiencia img {
+  max-width: 100%;
+}
+.areas-de-experiencia .areas-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.areas-de-experiencia .area-cap {
+  grid-area: area-cap;
+}
+.areas-de-experiencia .area-cap .cap {
+  text-align: center;
+}
+.areas-de-experiencia .area-edge {
+  grid-area: area-edge;
+}
+.areas-de-experiencia .area-leed {
+  grid-area: area-leed;
+}
+.areas-de-experiencia .area-nfpa {
+  grid-area: area-nfpa;
+}
+
 .hightlights {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
-.hightlights .hightlight {
+
+.hightlight {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,10 +119,17 @@ section {
   align-items: center;
   text-align: center;
 }
-.hightlights .hightlight .qty {
+.hightlight .qty {
   display: block;
   font-size: 3em;
   font-weight: bold;
+}
+.hightlight.hightlight-left {
+  text-align: left;
+  padding: 2rem 1rem;
+}
+.hightlight.hightlight-left ol {
+  padding-inline-start: 1rem;
 }
 
 .hidden {
@@ -108,13 +153,16 @@ section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .areas-de-experiencia {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "area-cap area-edge area-leed area-nfpa";
     align-items: center;
     text-align: center;
   }
   .clientes {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .areas-de-experiencia img {
+    max-height: 100px;
   }
 }
 

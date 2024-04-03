@@ -10,8 +10,13 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+}
+
+h3 {
+  font-weight: 400;
 }
 
 section {
@@ -72,22 +77,63 @@ section {
   }
 }
 
+.areas-de-experiencia {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "area-cap area-cap area-edge area-edge" "area-leed area-leed area-nfpa area-nfpa";
+  align-items: center;
+  gap: 30px;
+
+  img {
+    max-width: 100%;
+  }
+
+  .areas-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .area-cap {
+    grid-area: area-cap;
+    .cap {
+      text-align: center;
+    }
+  }
+  .area-edge {
+    grid-area: area-edge;
+  }
+  .area-leed {
+    grid-area: area-leed;
+  }
+  .area-nfpa {
+    grid-area: area-nfpa;
+  }
+}
+
 .hightlights {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  .hightlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: aliceblue;
-    padding: 2rem;
-    align-items: center;
-    text-align: center;
-    .qty {
-      display: block;
-      font-size: 3em;
-      font-weight: bold;
+  margin-bottom: 2rem;
+}
+.hightlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 2rem;
+  align-items: center;
+  text-align: center;
+  .qty {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  &.hightlight-left {
+    text-align: left;
+    padding: 2rem 1rem;
+    ol {
+      padding-inline-start: 1rem;
     }
   }
 }
@@ -126,14 +172,20 @@ section {
   }
 
   .areas-de-experiencia {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "area-cap area-edge area-leed area-nfpa";
     align-items: center;
     text-align: center;
   }
 
   .clientes {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .areas-de-experiencia {
+    img {
+      max-height: 100px;
+    }
   }
 }
 
