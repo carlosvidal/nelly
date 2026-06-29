@@ -144,6 +144,14 @@ const blocks = {
 >
   <section class="page-head">
     <div class="container container--narrow">
+      <img
+        class="page-head__logo"
+        src="/images/Logo-Edge.svg"
+        alt="EDGE — Excellence in Design for Greater Efficiencies"
+        width="150"
+        height="64"
+        fetchpriority="high"
+      />
       <span class="eyebrow">{intro.eyebrow[lang]}</span>
       <h1>{intro.title[lang]}</h1>
       <p class="lead">{intro.body[lang]}</p>
@@ -243,6 +251,11 @@ const blocks = {
     h1 {
       margin-block: var(--space-xs) var(--space-m);
     }
+  }
+  .page-head__logo {
+    height: 3.75rem;
+    width: auto;
+    margin-bottom: var(--space-m);
   }
   .block-title {
     font-size: var(--step-2);
