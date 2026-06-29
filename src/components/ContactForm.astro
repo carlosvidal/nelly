@@ -1,0 +1,99 @@
+---
+import { type Lang } from "../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const L = {
+  name: { es: "Nombre", en: "Name" },
+  email: { es: "Correo electrónico", en: "Email address" },
+  message: { es: "Mensaje", en: "Message" },
+  send: { es: "Enviar mensaje", en: "Send message" },
+  honeypot: {
+    es: "No completar si eres humano:",
+    en: "Don’t fill this out if you’re human:",
+  },
+};
+---
+
+<form
+  class="contact-form"
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action={lang === "es" ? "/contacto?ok=1" : "/en/contact?ok=1"}
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p class="contact-form__hp">
+    <label>
+      {L.honeypot[lang]} <input name="bot-field" />
+    </label>
+  </p>
+
+  <div class="contact-form__field">
+    <label for="cf-name">{L.name[lang]}</label>
+    <input id="cf-name" type="text" name="name" required autocomplete="name" />
+  </div>
+
+  <div class="contact-form__field">
+    <label for="cf-email">{L.email[lang]}</label>
+    <input
+      id="cf-email"
+      type="email"
+      name="email"
+      required
+      autocomplete="email"
+    />
+  </div>
+
+  <div class="contact-form__field">
+    <label for="cf-message">{L.message[lang]}</label>
+    <textarea id="cf-message" name="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn--solid">{L.send[lang]}</button>
+</form>
+
+<style lang="scss">
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+  }
+  .contact-form__hp {
+    position: absolute;
+    left: -9999px;
+  }
+  .contact-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: var(--step--1);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.85em 1em;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: border-color 0.2s ease;
+      resize: vertical;
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+    }
+  }
+  .contact-form button {
+    align-self: flex-start;
+  }
+</style>

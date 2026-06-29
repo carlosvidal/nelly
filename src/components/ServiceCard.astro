@@ -1,0 +1,95 @@
+---
+import type { Servicio } from "../lib/content";
+import { type Lang } from "../i18n/ui";
+import Icon from "./Icon.astro";
+
+interface Props {
+  servicio: Servicio;
+  lang: Lang;
+  href?: string;
+  index?: number;
+}
+const { servicio, lang, href, index } = Astro.props;
+const num = index != null ? String(index + 1).padStart(2, "0") : null;
+const Tag = href ? "a" : "div";
+---
+
+<Tag class="service" href={href}>
+  <div class="service__top">
+    <Icon name={servicio.icono} size={28} class="service__icon" />
+    {num && <span class="service__num">{num}</span>}
+  </div>
+  <h3 class="service__title">{servicio.titulo[lang]}</h3>
+  <p class="service__summary">{servicio.resumen[lang]}</p>
+  <ul class="service__benefits">
+    {servicio.beneficios[lang].map((b) => <li>{b}</li>)}
+  </ul>
+</Tag>
+
+<style lang="scss">
+  .service {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding: var(--space-m);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+  a.service:hover {
+    border-color: var(--ink);
+    transform: translateY(-3px);
+  }
+  .service__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .service__icon {
+    color: var(--accent-deep);
+  }
+  .service__num {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    color: var(--line);
+  }
+  .service__title {
+    font-size: var(--step-1);
+  }
+  .service__summary {
+    font-size: var(--step--1);
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+  .service__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: var(--space-s);
+    border-top: 1px solid var(--line);
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+      font-size: var(--step--1);
+      color: var(--ink-2);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.6em;
+        width: 0.5em;
+        height: 0.5em;
+        border-left: 1.5px solid var(--accent);
+        border-bottom: 1.5px solid var(--accent);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+</style>

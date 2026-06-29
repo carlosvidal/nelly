@@ -1,0 +1,130 @@
+[
+  {
+    "id": "asesoria-edge",
+    "orden": 0,
+    "icono": "leaf",
+    "titulo": { "es": "Consultoría EDGE", "en": "EDGE Consulting" },
+    "resumen": {
+      "es": "Acompañamiento integral para que tu proyecto alcance la certificación EDGE, desde el diseño hasta la certificación final post-construcción.",
+      "en": "End-to-end guidance to take your project to EDGE certification, from design through final post-construction certification."
+    },
+    "descripcion": {
+      "es": [
+        "Como EDGE Expert acompaño al equipo del proyecto en la aplicación de estrategias de eficiencia en energía, agua y materiales, optimizando el diseño para alcanzar —y superar— el umbral de ahorro que exige EDGE.",
+        "El trabajo cubre el análisis del proyecto, el modelado en la plataforma EDGE, la definición de medidas costo-eficientes y la gestión documental para la Certificación Preliminar y la Certificación Final post-construcción."
+      ],
+      "en": [
+        "As an EDGE Expert I work alongside the project team to apply efficiency strategies for energy, water and materials, optimizing the design to reach —and exceed— the savings threshold EDGE requires.",
+        "The engagement covers project analysis, modeling on the EDGE platform, the definition of cost-effective measures and the documentation needed for both Preliminary and final Post-Construction certification."
+      ]
+    },
+    "beneficios": {
+      "es": [
+        "Estrategias de ahorro adaptadas al presupuesto del proyecto",
+        "Modelado y gestión en la plataforma EDGE",
+        "Soporte en certificación preliminar y final"
+      ],
+      "en": [
+        "Savings strategies tailored to the project budget",
+        "Modeling and management on the EDGE platform",
+        "Support for preliminary and final certification"
+      ]
+    }
+  },
+  {
+    "id": "auditoria-edge",
+    "orden": 1,
+    "icono": "check",
+    "titulo": { "es": "Auditoría EDGE", "en": "EDGE Auditing" },
+    "resumen": {
+      "es": "Auditoría independiente de las etapas preliminar y final EDGE, con tiempos de revisión más cortos por mi condición de EDGE Auditor aprobada.",
+      "en": "Independent audit of the preliminary and final EDGE stages, with shorter review times thanks to my approved EDGE Auditor status."
+    },
+    "descripcion": {
+      "es": [
+        "Como EDGE Auditor aprobada realizo la verificación independiente que confirma que el proyecto cumple con el estándar EDGE, tanto en la etapa preliminar (diseño) como en la etapa final (post-construcción).",
+        "Mi acreditación permite tiempos de revisión más cortos y, por lo tanto, alcanzar la certificación en menor plazo. He auditado proyectos residenciales, de oficinas, comerciales y del Estado en todo el Perú."
+      ],
+      "en": [
+        "As an approved EDGE Auditor I carry out the independent verification that confirms a project meets the EDGE standard, both at the preliminary (design) stage and the final (post-construction) stage.",
+        "My accreditation enables shorter review times and, therefore, faster certification. I have audited residential, office, retail and government projects across Peru."
+      ]
+    },
+    "beneficios": {
+      "es": [
+        "Verificación independiente y rigurosa",
+        "Tiempos de revisión más cortos",
+        "Experiencia en proyectos residenciales, comerciales y del Estado"
+      ],
+      "en": [
+        "Rigorous, independent verification",
+        "Shorter review times",
+        "Experience with residential, retail and government projects"
+      ]
+    }
+  },
+  {
+    "id": "seguridad-nfpa",
+    "orden": 2,
+    "icono": "shield",
+    "titulo": { "es": "Seguridad y protección de la vida", "en": "Life Safety & Protection" },
+    "resumen": {
+      "es": "Asesoría en seguridad orientada a la protección de la vida, bajo el código NFPA 101 y el Reglamento Nacional de Edificaciones.",
+      "en": "Safety advisory focused on life protection, under the NFPA 101 code and Peru's National Building Code."
+    },
+    "descripcion": {
+      "es": [
+        "Brindo asesoría en proyectos de seguridad relacionados a la protección de la vida, aplicando el código NFPA 101 (Life Safety Code) en conjunto con el Reglamento Nacional de Edificaciones (RNE).",
+        "El objetivo es resolver, desde el diseño, las rutas de evacuación, la compartimentación y las condiciones de seguridad que permiten edificaciones más seguras para sus ocupantes."
+      ],
+      "en": [
+        "I advise on safety projects focused on protecting life, applying the NFPA 101 Life Safety Code together with Peru's National Building Code (RNE).",
+        "The goal is to resolve, from the design stage, the evacuation routes, compartmentation and safety conditions that make buildings safer for their occupants."
+      ]
+    },
+    "beneficios": {
+      "es": [
+        "Aplicación del código NFPA 101 y el RNE",
+        "Revisión de rutas de evacuación y compartimentación",
+        "Seguridad resuelta desde el diseño"
+      ],
+      "en": [
+        "Application of the NFPA 101 code and the RNE",
+        "Review of evacuation routes and compartmentation",
+        "Safety resolved from the design stage"
+      ]
+    }
+  },
+  {
+    "id": "diseno-arquitectonico",
+    "orden": 3,
+    "icono": "compass",
+    "titulo": { "es": "Diseño arquitectónico sostenible", "en": "Sustainable Architectural Design" },
+    "resumen": {
+      "es": "Diseño arquitectónico con criterio bioclimático, integrando desde el primer trazo las estrategias de eficiencia y confort que valora EDGE.",
+      "en": "Architectural design with a bioclimatic approach, embedding the efficiency and comfort strategies EDGE values from the very first sketch."
+    },
+    "descripcion": {
+      "es": [
+        "Con formación de Máster en Medio Ambiente y Arquitectura Bioclimática, abordo el diseño arquitectónico integrando desde la etapa conceptual las decisiones de orientación, envolvente, iluminación y ventilación natural que reducen el consumo de energía y agua.",
+        "Diseñar con criterio sostenible desde el inicio evita sobrecostos posteriores y facilita que el proyecto alcance la certificación EDGE de forma natural, sin re-trabajos."
+      ],
+      "en": [
+        "With a Master's in Environment and Bioclimatic Architecture, I approach architectural design by embedding, from the concept stage, the decisions on orientation, envelope, daylighting and natural ventilation that reduce energy and water consumption.",
+        "Designing sustainably from the outset avoids later cost overruns and lets a project reach EDGE certification naturally, without rework."
+      ]
+    },
+    "beneficios": {
+      "es": [
+        "Diseño bioclimático desde la etapa conceptual",
+        "Eficiencia en energía y agua integrada al proyecto",
+        "Camino más directo hacia la certificación EDGE"
+      ],
+      "en": [
+        "Bioclimatic design from the concept stage",
+        "Energy and water efficiency built into the project",
+        "A more direct path to EDGE certification"
+      ]
+    }
+  }
+]

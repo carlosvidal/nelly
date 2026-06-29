@@ -1,0 +1,74 @@
+---
+import { type Lang } from "../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const badges = [
+  { src: "/images/Logo-Edge.svg", alt: "EDGE", w: 120 },
+  { src: "/images/Logo-IFC.svg", alt: "IFC — International Finance Corporation", w: 120 },
+  { src: "/images/Logo-CAP.png", alt: "Colegio de Arquitectos del Perú", w: 90 },
+  { src: "/images/Logo-USGBC.png", alt: "U.S. Green Building Council", w: 90 },
+  { src: "/images/Logo-LEED-AP-BD+C.jpg", alt: "LEED AP BD+C", w: 70 },
+  { src: "/images/Logo-NFPA.webp", alt: "NFPA", w: 70 },
+  { src: "/images/Logo-Peru-GBC.jpg", alt: "Perú Green Building Council", w: 80 },
+];
+
+const heading = {
+  es: "Acreditaciones y membresías",
+  en: "Accreditations & memberships",
+};
+---
+
+<div class="badges">
+  <p class="badges__heading">{heading[lang]}</p>
+  <div class="badges__row">
+    {
+      badges.map((b) => (
+        <img
+          src={b.src}
+          alt={b.alt}
+          title={b.alt}
+          style={`max-width:${b.w}px`}
+          loading="lazy"
+          decoding="async"
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style lang="scss">
+  .badges__heading {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: var(--space-m);
+  }
+  .badges__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+
+    img {
+      max-height: 60px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(1);
+      opacity: 0.7;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+</style>

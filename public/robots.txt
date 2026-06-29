@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arquitectanelly.cuneo.com.pe/sitemap-index.xml

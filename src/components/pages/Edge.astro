@@ -1,0 +1,369 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../Icon.astro";
+import { ROUTES, UI, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  title: {
+    es: "Certificación EDGE · Qué es y sus beneficios",
+    en: "EDGE Certification · What it is and its benefits",
+  },
+  description: {
+    es: "Qué es la certificación EDGE, sus etapas (preliminar y final), niveles y los beneficios de certificar tu edificación: ahorro, valor y financiamiento verde.",
+    en: "What EDGE certification is, its stages (preliminary and final), levels and the benefits of certifying your building: savings, value and green financing.",
+  },
+};
+
+const intro = {
+  eyebrow: { es: "Certificación EDGE", en: "EDGE Certification" },
+  title: {
+    es: "Edificios más eficientes, certificados internacionalmente",
+    en: "More efficient buildings, certified internationally",
+  },
+  body: {
+    es: "EDGE (Excellence in Design for Greater Efficiencies) es una certificación de construcción sostenible creada por IFC, miembro del Grupo Banco Mundial. Mide y certifica el ahorro de un edificio en tres recursos clave, con un mínimo del 20 % en cada uno.",
+    en: "EDGE (Excellence in Design for Greater Efficiencies) is a green-building certification created by IFC, a member of the World Bank Group. It measures and certifies a building’s savings across three key resources, with a minimum of 20% in each.",
+  },
+};
+
+const pillars = [
+  {
+    icon: "leaf",
+    title: { es: "Energía", en: "Energy" },
+    text: {
+      es: "Orientación, envolvente eficiente, iluminación y equipos que reducen el consumo energético del edificio.",
+      en: "Orientation, an efficient envelope, lighting and equipment that reduce the building’s energy consumption.",
+    },
+  },
+  {
+    icon: "compass",
+    title: { es: "Agua", en: "Water" },
+    text: {
+      es: "Griferías y aparatos eficientes, reúso y estrategias que disminuyen el consumo de agua potable.",
+      en: "Efficient fixtures and fittings, reuse and strategies that lower potable-water consumption.",
+    },
+  },
+  {
+    icon: "shield",
+    title: { es: "Materiales", en: "Materials" },
+    text: {
+      es: "Selección de materiales con menor energía incorporada en muros, pisos, techos y estructura.",
+      en: "Selection of materials with lower embodied energy in walls, floors, roofs and structure.",
+    },
+  },
+];
+
+const levels = [
+  {
+    name: { es: "EDGE Certified", en: "EDGE Certified" },
+    text: {
+      es: "Mínimo 20 % de ahorro en energía, agua y energía incorporada en materiales.",
+      en: "At least 20% savings in energy, water and embodied energy in materials.",
+    },
+  },
+  {
+    name: { es: "EDGE Advanced", en: "EDGE Advanced" },
+    text: {
+      es: "40 % o más de ahorro de energía. Un nivel alcanzado, por ejemplo, en las Oficinas OL.",
+      en: "40% or more energy savings. A level reached, for example, at the OL Offices.",
+    },
+  },
+  {
+    name: { es: "Zero Carbon", en: "Zero Carbon" },
+    text: {
+      es: "100 % de ahorro de energía mediante eficiencia y energía renovable.",
+      en: "100% energy savings through efficiency and renewable energy.",
+    },
+  },
+];
+
+const stages = [
+  {
+    n: "01",
+    title: { es: "Certificación Preliminar", en: "Preliminary Certification" },
+    text: {
+      es: "Se otorga en la etapa de diseño, una vez que el proyecto demuestra que cumple con los ahorros EDGE.",
+      en: "Awarded at the design stage, once the project demonstrates it meets the EDGE savings.",
+    },
+  },
+  {
+    n: "02",
+    title: { es: "Certificación Final", en: "Final Certification" },
+    text: {
+      es: "Se otorga tras la construcción, con una auditoría que verifica en obra lo proyectado.",
+      en: "Awarded after construction, with an audit that verifies on site what was designed.",
+    },
+  },
+];
+
+const benefits = {
+  es: [
+    "Reducción de costos operativos por menor consumo de energía y agua",
+    "Mayor valor y diferenciación del inmueble en el mercado",
+    "Acceso a líneas de financiamiento verde",
+    "Respaldo internacional de IFC — Grupo Banco Mundial",
+    "Menor huella ambiental del proyecto",
+    "Mejor confort para los ocupantes",
+  ],
+  en: [
+    "Lower operating costs through reduced energy and water use",
+    "Greater property value and market differentiation",
+    "Access to green-financing lines",
+    "International backing from IFC — World Bank Group",
+    "A smaller environmental footprint",
+    "Better comfort for occupants",
+  ],
+};
+
+const blocks = {
+  pillars: { es: "Los tres pilares", en: "The three pillars" },
+  levels: { es: "Niveles de certificación", en: "Certification levels" },
+  stages: { es: "Las etapas del proceso", en: "The stages of the process" },
+  benefits: { es: "Beneficios de certificar", en: "Benefits of certifying" },
+  whyTitle: {
+    es: "¿Por qué certificar con Nelly Cúneo?",
+    en: "Why certify with Nelly Cúneo?",
+  },
+  whyText: {
+    es: "Como EDGE Expert y EDGE Auditor aprobada —y con experiencia previa como Green Building Consultant de IFC— acompaño tanto la consultoría como la auditoría. Mi acreditación permite tiempos de revisión más cortos y alcanzar la certificación en menor plazo.",
+    en: "As an EDGE Expert and approved EDGE Auditor —with prior experience as IFC’s Green Building Consultant— I cover both consulting and auditing. My accreditation enables shorter review times and faster certification.",
+  },
+};
+---
+
+<BaseLayout
+  lang={lang}
+  page="edge"
+  title={meta.title[lang]}
+  description={meta.description[lang]}
+>
+  <section class="page-head">
+    <div class="container container--narrow">
+      <span class="eyebrow">{intro.eyebrow[lang]}</span>
+      <h1>{intro.title[lang]}</h1>
+      <p class="lead">{intro.body[lang]}</p>
+    </div>
+  </section>
+
+  <!-- Pilares -->
+  <section class="section">
+    <div class="container">
+      <h2 class="block-title">{blocks.pillars[lang]}</h2>
+      <div class="pillars">
+        {
+          pillars.map((p) => (
+            <div class="pillar">
+              <Icon name={p.icon} size={30} class="pillar__icon" />
+              <h3>{p.title[lang]}</h3>
+              <p>{p.text[lang]}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Niveles -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="block-title">{blocks.levels[lang]}</h2>
+      <div class="levels">
+        {
+          levels.map((l) => (
+            <div class="level">
+              <h3>{l.name[lang]}</h3>
+              <p>{l.text[lang]}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Etapas -->
+  <section class="section">
+    <div class="container">
+      <h2 class="block-title">{blocks.stages[lang]}</h2>
+      <div class="stages">
+        {
+          stages.map((s) => (
+            <div class="stage">
+              <span class="stage__n">{s.n}</span>
+              <div>
+                <h3>{s.title[lang]}</h3>
+                <p>{s.text[lang]}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="block-title">{blocks.benefits[lang]}</h2>
+      <ul class="benefits">
+        {
+          benefits[lang].map((b) => (
+            <li>
+              <Icon name="check" size={20} /> {b}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Por qué Nelly + CTA -->
+  <section class="section">
+    <div class="container container--narrow why">
+      <h2>{blocks.whyTitle[lang]}</h2>
+      <p class="lead">{blocks.whyText[lang]}</p>
+      <a class="btn btn--solid" href={ROUTES.contacto[lang]}>
+        {UI.ctaContact[lang]}<Icon name="arrow" size={18} />
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../../styles/tokens" as *;
+
+  .page-head {
+    padding-block: var(--space-xl) var(--space-l);
+    border-bottom: 1px solid var(--line);
+
+    h1 {
+      margin-block: var(--space-xs) var(--space-m);
+    }
+  }
+  .block-title {
+    font-size: var(--step-2);
+    margin-bottom: var(--space-l);
+  }
+  .section--alt {
+    background: var(--paper-2);
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .pillar {
+    padding: var(--space-m);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+
+    &__icon {
+      color: var(--accent-deep);
+      margin-bottom: var(--space-s);
+    }
+    h3 {
+      font-size: var(--step-1);
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--ink-2);
+      font-size: var(--step--1);
+    }
+  }
+
+  .levels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .level {
+    padding: var(--space-m);
+    border-left: 3px solid var(--accent);
+    background: var(--paper);
+
+    h3 {
+      font-size: var(--step-1);
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--ink-2);
+      font-size: var(--step--1);
+    }
+  }
+
+  .stages {
+    display: grid;
+    gap: var(--space-m);
+    max-width: 52rem;
+  }
+  .stage {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-m);
+    align-items: start;
+    padding-bottom: var(--space-m);
+    border-bottom: 1px solid var(--line);
+
+    &__n {
+      font-family: var(--font-display);
+      font-size: var(--step-3);
+      color: var(--accent);
+      line-height: 1;
+    }
+    h3 {
+      font-size: var(--step-1);
+      margin-bottom: 0.3rem;
+    }
+    p {
+      color: var(--ink-2);
+    }
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-s) var(--space-l);
+    max-width: 60rem;
+
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6em;
+      color: var(--ink-2);
+
+      :global(svg) {
+        color: var(--accent-deep);
+        flex-shrink: 0;
+        margin-top: 0.15em;
+      }
+    }
+  }
+
+  .why {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-m);
+
+    .lead {
+      max-width: 58ch;
+    }
+  }
+</style>

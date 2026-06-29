@@ -1,0 +1,87 @@
+---
+interface Props {
+  value: number;
+  label: string;
+  suffix?: string;
+}
+const { value, label, suffix = "" } = Astro.props;
+---
+
+<div class="counter">
+  <span class="counter__num" data-counter data-target={value} data-suffix={suffix}
+    >0{suffix}</span
+  >
+  <span class="counter__label">{label}</span>
+</div>
+
+<script is:inline>
+  (() => {
+    if (window.__countersInit) return;
+    window.__countersInit = true;
+
+    const init = () => {
+    const animate = (el) => {
+      const target = +el.dataset.target;
+      const suffix = el.dataset.suffix || "";
+      const duration = 1400;
+      const start = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const els = document.querySelectorAll("[data-counter]");
+    if (reduce || !("IntersectionObserver" in window)) {
+      els.forEach((el) => (el.textContent = el.dataset.target + (el.dataset.suffix || "")));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            animate(e.target);
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    els.forEach((el) => io.observe(el));
+    };
+
+    // Espera a que TODOS los contadores existan en el DOM (los scripts is:inline
+    // corren durante el parseo, antes de que el resto de contadores se rendericen)
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
+
+<style lang="scss">
+  .counter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .counter__num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-4);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .counter__label {
+    font-size: var(--step--1);
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+</style>

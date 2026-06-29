@@ -1,0 +1,469 @@
+[
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Mariscal Castilla",
+    "ubicacion": "San Borja",
+    "cliente": "Pabott Inversiones SAC",
+    "estado": "final",
+    "imagen": "/images/Edificio-Mariscal-Castilla.jpg",
+    "destacado": true,
+    "internacional": false,
+    "nota": {
+      "es": "Primer proyecto en el Perú en obtener la Certificación Preliminar EDGE.",
+      "en": "First project in Peru to obtain the EDGE Preliminary Certification."
+    }
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Hermano Lobo I y II",
+    "ubicacion": "San Borja",
+    "cliente": "JN Construcciones e Inversiones S.A.",
+    "estado": "final",
+    "imagen": "/images/Edificio-Hermano-Lobo-I-y-II.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Los Recuerdos",
+    "ubicacion": "San Borja",
+    "cliente": "JN Construcciones e Inversiones S.A.",
+    "estado": "final",
+    "imagen": "/images/Edificio-Los-Recuerdos.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Donizetti",
+    "ubicacion": "San Borja",
+    "cliente": "Inversiones Crecer SAC",
+    "estado": "final",
+    "imagen": null,
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Green Boulevard",
+    "ubicacion": "San Borja",
+    "cliente": "Empire Inversiones SAC",
+    "estado": "final",
+    "imagen": "/images/Edificio-Green-Boulevard.jpg",
+    "destacado": true,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio La Pradera",
+    "ubicacion": "San Borja",
+    "cliente": "Constructora e Inmobiliaria Serenzza",
+    "estado": "final",
+    "imagen": "/images/Edificio-La-Pradera.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio El Dorado",
+    "ubicacion": "San Borja",
+    "cliente": "JN Construcciones e Inversiones S.A.",
+    "estado": "edge",
+    "imagen": "/images/Edificio-El-Dorado.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Galeón",
+    "ubicacion": "San Borja",
+    "cliente": "JN Construcciones e Inversiones S.A.",
+    "estado": "edge",
+    "imagen": "/images/Edificio-Galeón.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Trinidad",
+    "ubicacion": "San Borja",
+    "cliente": "Galeón Inmobiliaria",
+    "estado": "edge",
+    "imagen": "/images/Edificio-Trinidad.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Gaetano",
+    "ubicacion": "San Borja",
+    "cliente": "Constructora Inmobiliaria JL S.A.C.",
+    "estado": "en-proceso-final",
+    "imagen": "/images/Edificio-Gaetano.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio El Dorado II",
+    "ubicacion": "San Borja",
+    "cliente": "JN Construcciones e Inversiones S.A.",
+    "estado": "final",
+    "imagen": "/images/Edificio-El-Dorado-II.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Calle 05",
+    "ubicacion": "San Borja",
+    "cliente": "ARA Ingenieros",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Calle-05.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Vía Boyle",
+    "ubicacion": "San Borja",
+    "cliente": "Origen Inmobiliaria",
+    "estado": "final",
+    "imagen": "/images/Edificio-Via-Boyle.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Beethoven",
+    "ubicacion": "San Borja",
+    "cliente": "Inversiones Crecer SAC",
+    "estado": "final",
+    "imagen": "/images/Edificio-Beethoven.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Wiese",
+    "ubicacion": "Santiago de Surco",
+    "cliente": "Make Inmobiliaria",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Wiese.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio León García",
+    "ubicacion": "Santiago de Surco",
+    "cliente": "RGS Constructores S.A.C.",
+    "estado": "en-proceso-preliminar",
+    "imagen": "/images/Edificio-Leon-García.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Millet 173",
+    "ubicacion": "San Borja",
+    "cliente": "Grupo BA Contratistas Generales S.A.C.",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Millet-173.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio La Floresta Boulevard",
+    "ubicacion": "San Borja",
+    "cliente": "Empire Inversiones SAC",
+    "estado": "en-proceso-preliminar",
+    "imagen": "/images/Edificio-La-Floresta-Boulevard.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Tomás Marsano",
+    "ubicacion": "Miraflores",
+    "cliente": "Elsvan",
+    "estado": "en-proceso-preliminar",
+    "imagen": "/images/Edificio-Tomas-Marsano.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Las Dalias",
+    "ubicacion": "Santiago de Surco",
+    "cliente": "Make Inmobiliaria",
+    "estado": "en-proceso-preliminar",
+    "imagen": "/images/Edificio-Las-Dalias.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Multifamiliar — Ciudad de México",
+    "ubicacion": "Ciudad de México, México",
+    "cliente": "",
+    "estado": "edge",
+    "imagen": null,
+    "destacado": false,
+    "internacional": true,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Multifamiliar y Área Comercial — Guadalajara",
+    "ubicacion": "Guadalajara, México",
+    "cliente": "",
+    "estado": "edge",
+    "imagen": null,
+    "destacado": false,
+    "internacional": true,
+    "nota": null
+  },
+  {
+    "tipo": "asesoria",
+    "nombre": "Edificio Multifamiliar y Comercial — Monterrey",
+    "ubicacion": "Monterrey, México",
+    "cliente": "",
+    "estado": "edge",
+    "imagen": null,
+    "destacado": false,
+    "internacional": true,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Edificio Partisano",
+    "ubicacion": "Cusco",
+    "cliente": "Damantium",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Partisano.jpg",
+    "destacado": true,
+    "internacional": false,
+    "nota": {
+      "es": "Primera certificación EDGE auditada en Cusco.",
+      "en": "First audited EDGE certification in Cusco."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Edificio Libitum",
+    "ubicacion": "Santiago de Surco",
+    "cliente": "Nexo Inmobiliaria",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Libitum.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Edificio San Borja Norte",
+    "ubicacion": "San Borja",
+    "cliente": "Binda Ingenieros",
+    "estado": "final",
+    "imagen": "/images/Edificio-San-Borja-Norte.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Edificio Toscanini",
+    "ubicacion": "San Borja",
+    "cliente": "Construcción Mallorca",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Toscanini.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Centro Comercial Puruchuco",
+    "ubicacion": "Ate",
+    "cliente": "EFIZITY y Real Plaza",
+    "estado": "final",
+    "imagen": "/images/Centro-Comercial-Puruchuco.jpg",
+    "destacado": true,
+    "internacional": false,
+    "nota": {
+      "es": "El centro comercial más grande del mundo en obtener la certificación de diseño sostenible EDGE.",
+      "en": "The largest shopping mall in the world to obtain EDGE sustainable-design certification."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Vivienda Sostenible",
+    "ubicacion": "San Borja",
+    "cliente": "Constructora Inmobiliaria Inversiones Imperio SAC",
+    "estado": "preliminar",
+    "imagen": "/images/Vivienda-Sostenible.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Oficina Deposeguro",
+    "ubicacion": "La Victoria",
+    "cliente": "Deposeguro",
+    "estado": "final",
+    "imagen": "/images/Oficina-Deposeguro.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Multifamiliar Cayma",
+    "ubicacion": "Cayma, Arequipa",
+    "cliente": "",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Multifamiliar-Cayma.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Edificio Multifamiliar José Gonzáles",
+    "ubicacion": "Miraflores",
+    "cliente": "Grupo Caster",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Multifamiliar-José-Gonzales.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Edificio Multifamiliar Quiroga",
+    "ubicacion": "Lima",
+    "cliente": "Gestión Colaborativa",
+    "estado": "preliminar",
+    "imagen": "/images/Edificio-Multifamiliar-Quiroga.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Intitower",
+    "ubicacion": "Santiago de Surco",
+    "cliente": "Vitain Desarrolladora 22 S.A.C.",
+    "estado": "en-proceso-preliminar",
+    "imagen": "/images/Intitower.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": null
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Oficinas OL",
+    "ubicacion": "Lince",
+    "cliente": "Grupo OL",
+    "estado": "advanced",
+    "imagen": "/images/Oficinas-Ol.jpg",
+    "destacado": true,
+    "internacional": false,
+    "nota": {
+      "es": "Primer proyecto auditado EDGE Advanced.",
+      "en": "First project audited under EDGE Advanced."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Centro de Empleo Chiclayo",
+    "ubicacion": "Chiclayo",
+    "cliente": "Ministerio del Trabajo",
+    "estado": "preliminar",
+    "imagen": "/images/Centro-de-Empleo-Chiclayo.jpg",
+    "destacado": true,
+    "internacional": false,
+    "nota": {
+      "es": "Entre los primeros proyectos del Estado peruano auditados bajo EDGE.",
+      "en": "Among the first Peruvian government projects audited under EDGE."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Centro de Empleo Ica",
+    "ubicacion": "Ica",
+    "cliente": "Ministerio del Trabajo",
+    "estado": "preliminar",
+    "imagen": "/images/centro-de-empleo-ica.webp",
+    "destacado": false,
+    "internacional": false,
+    "nota": {
+      "es": "Entre los primeros proyectos del Estado peruano auditados bajo EDGE.",
+      "en": "Among the first Peruvian government projects audited under EDGE."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Centro de Empleo La Libertad",
+    "ubicacion": "La Libertad",
+    "cliente": "Ministerio del Trabajo",
+    "estado": "preliminar",
+    "imagen": "/images/Centro-de-Empleo-La-Libertad.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": {
+      "es": "Entre los primeros proyectos del Estado peruano auditados bajo EDGE.",
+      "en": "Among the first Peruvian government projects audited under EDGE."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Centro de Empleo Arequipa",
+    "ubicacion": "Arequipa",
+    "cliente": "Ministerio del Trabajo",
+    "estado": "preliminar",
+    "imagen": null,
+    "destacado": false,
+    "internacional": false,
+    "nota": {
+      "es": "Entre los primeros proyectos del Estado peruano auditados bajo EDGE.",
+      "en": "Among the first Peruvian government projects audited under EDGE."
+    }
+  },
+  {
+    "tipo": "auditoria",
+    "nombre": "Centro de Empleo San Martín",
+    "ubicacion": "San Martín",
+    "cliente": "Ministerio del Trabajo",
+    "estado": "preliminar",
+    "imagen": "/images/Centro-de-Empleo-San-Martin.jpg",
+    "destacado": false,
+    "internacional": false,
+    "nota": {
+      "es": "Entre los primeros proyectos del Estado peruano auditados bajo EDGE.",
+      "en": "Among the first Peruvian government projects audited under EDGE."
+    }
+  }
+]

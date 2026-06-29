@@ -1,0 +1,83 @@
+---
+import { ROUTES, LANGS, type Lang, type PageId } from "../i18n/ui";
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  page: PageId;
+  image?: string;
+}
+
+const { title, description, lang, page, image = "/images/Centro-Comercial-Puruchuco.jpg" } =
+  Astro.props;
+
+const site = Astro.site ?? new URL("https://arquitectanelly.cuneo.com.pe");
+const canonical = new URL(ROUTES[page][lang], site).href;
+const imageUrl = new URL(image, site).href;
+
+// Alternates hreflang (recíprocos ES/EN + x-default → ES)
+const alternates = LANGS.map((l) => ({
+  lang: l === "es" ? "es-PE" : "en",
+  href: new URL(ROUTES[page][l], site).href,
+}));
+const xDefault = new URL(ROUTES[page]["es"], site).href;
+
+// JSON-LD — entidad profesional
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Arq. Nelly Cúneo Galdós",
+  image: imageUrl,
+  url: site.href,
+  description,
+  areaServed: ["Perú", "Latinoamérica"],
+  knowsAbout: [
+    "Certificación EDGE",
+    "Arquitectura bioclimática",
+    "Auditoría EDGE",
+    "Eficiencia energética",
+    "NFPA 101",
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Nelly Alexandra Cúneo Galdós",
+    jobTitle: "Arquitecta · EDGE Expert & EDGE Auditor",
+    alumniOf: [
+      "Universidad Ricardo Palma",
+      "Universidad Politécnica de Madrid",
+    ],
+  },
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+{
+  alternates.map((a) => (
+    <link rel="alternate" hreflang={a.lang} href={a.href} />
+  ))
+}
+<link rel="alternate" hreflang="x-default" href={xDefault} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Arq. Nelly Cúneo Galdós" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:locale" content={lang === "es" ? "es_PE" : "en_US"} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(jsonLd)}
+/>

@@ -1,0 +1,53 @@
+// ── Design tokens · Arq. Nelly Cúneo ───────────────────────────────
+// Estética arquitectónica minimalista: monocromo cálido + 1 acento.
+// (Las fuentes self-hosted se importan en BaseLayout.astro)
+
+// Breakpoints (uso en media queries vía SCSS)
+$bp-sm: 40rem; // 640px
+$bp-md: 52rem; // 832px
+$bp-lg: 64rem; // 1024px
+$bp-xl: 80rem; // 1280px
+
+:root {
+  // Paleta — monocromo cálido
+  --paper: #f6f5f1;
+  --paper-2: #efede7;
+  --ink: #16150f;
+  --ink-2: #3a3833;
+  --muted: #76736a;
+  --line: #d9d6cd;
+  --line-strong: #16150f;
+
+  // Acento — sage / verde sostenible desaturado
+  --accent: #5f7355;
+  --accent-deep: #43523c;
+  --accent-soft: #e7ebe1;
+
+  // Tipografía
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-body: "Inter Variable", "Inter", system-ui, sans-serif;
+
+  // Escala tipográfica fluida (clamp: min, fluido, max)
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.3rem + 1vw, 2.1rem);
+  --step-3: clamp(1.9rem, 1.5rem + 2vw, 3rem);
+  --step-4: clamp(2.4rem, 1.7rem + 3.4vw, 4.4rem);
+  --step-5: clamp(3rem, 1.9rem + 5.4vw, 6.5rem);
+
+  // Espaciado
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: 1.75rem;
+  --space-l: 3rem;
+  --space-xl: 5rem;
+  --space-2xl: 8rem;
+
+  // Layout
+  --container: 75rem; // 1200px
+  --container-narrow: 46rem; // ~736px para texto largo
+  --radius: 2px;
+  --border: 1px solid var(--line);
+}

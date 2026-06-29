@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectGrid from "../ProjectGrid.astro";
+import {
+  proyectosNacionales,
+  proyectosInternacionales,
+  clientesConLogo,
+} from "../../lib/content";
+import { UI, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  title: {
+    es: "Proyectos · Portafolio de asesorías y auditorías EDGE",
+    en: "Projects · Portfolio of EDGE consulting and audits",
+  },
+  description: {
+    es: "Portafolio de proyectos EDGE en el Perú y Latinoamérica: edificios residenciales, oficinas, centros comerciales y proyectos del Estado.",
+    en: "Portfolio of EDGE projects across Peru and Latin America: residential buildings, offices, shopping centers and government projects.",
+  },
+};
+const header = {
+  eyebrow: { es: "Portafolio", en: "Portfolio" },
+  title: { es: "Proyectos", en: "Projects" },
+  intro: {
+    es: "Una selección de proyectos en los que he participado como consultora o auditora EDGE, desde edificios residenciales hasta el centro comercial más grande del mundo en certificar su diseño con EDGE.",
+    en: "A selection of projects where I have taken part as an EDGE consultant or auditor, from residential buildings to the largest shopping center in the world to certify its design with EDGE.",
+  },
+};
+---
+
+<BaseLayout
+  lang={lang}
+  page="proyectos"
+  title={meta.title[lang]}
+  description={meta.description[lang]}
+>
+  <section class="page-head">
+    <div class="container container--narrow">
+      <span class="eyebrow">{header.eyebrow[lang]}</span>
+      <h1>{header.title[lang]}</h1>
+      <p class="lead">{header.intro[lang]}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <ProjectGrid proyectos={proyectosNacionales} lang={lang} filterable={true} />
+    </div>
+  </section>
+
+  <!-- Internacionales -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="block-title">{UI.internationalProjects[lang]}</h2>
+      <ul class="intl">
+        {
+          proyectosInternacionales.map((p) => (
+            <li class="intl__item">
+              <span class="intl__name">{p.nombre}</span>
+              <span class="intl__loc">{p.ubicacion}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Clientes -->
+  <section class="section">
+    <div class="container">
+      <h2 class="block-title">{UI.clients[lang]}</h2>
+      <div class="clients">
+        {
+          clientesConLogo.map((c) => (
+            <div class="clients__item">
+              <img src={c.imagen} alt={c.nombre} title={c.nombre} loading="lazy" decoding="async" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../../styles/tokens" as *;
+
+  .page-head {
+    padding-block: var(--space-xl) var(--space-l);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: var(--space-xl);
+
+    h1 {
+      margin-block: var(--space-xs) var(--space-m);
+    }
+  }
+  .section--alt {
+    background: var(--paper-2);
+  }
+  .block-title {
+    font-size: var(--step-2);
+    margin-bottom: var(--space-l);
+  }
+
+  .intl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .intl__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: var(--space-m);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+  }
+  .intl__name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--step-0);
+  }
+  .intl__loc {
+    font-size: var(--step--1);
+    color: var(--muted);
+  }
+
+  .clients {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-m);
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $bp-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .clients__item {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 3 / 2;
+    padding: var(--space-s);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+
+    img {
+      max-height: 56px;
+      max-width: 80%;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(1);
+      opacity: 0.75;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+    &:hover img {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+</style>

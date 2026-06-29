@@ -1,0 +1,53 @@
+---
+import { ROUTES, LANGS, UI, type Lang, type PageId } from "../i18n/ui";
+
+interface Props {
+  lang: Lang;
+  page: PageId;
+}
+const { lang, page } = Astro.props;
+---
+
+<div class="lang" role="group" aria-label="Idioma / Language">
+  {
+    LANGS.map((l, i) => (
+      <>
+        {i > 0 && <span class="lang__sep" aria-hidden="true">/</span>}
+        {l === lang ? (
+          <span class="lang__current" aria-current="true">
+            {UI.langName[l]}
+          </span>
+        ) : (
+          <a class="lang__link" href={ROUTES[page][l]} hreflang={l}>
+            {UI.langName[l]}
+          </a>
+        )}
+      </>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  .lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .lang__sep {
+    color: var(--line);
+  }
+  .lang__current {
+    color: var(--ink);
+  }
+  .lang__link {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--accent-deep);
+    }
+  }
+</style>

@@ -1,0 +1,194 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../Icon.astro";
+import { servicios } from "../../lib/content";
+import { ROUTES, UI, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  title: {
+    es: "Servicios · Consultoría EDGE, Auditoría y Diseño Sostenible",
+    en: "Services · EDGE Consulting, Auditing & Sustainable Design",
+  },
+  description: {
+    es: "Consultoría EDGE, auditoría EDGE, seguridad y protección de la vida (NFPA 101) y diseño arquitectónico sostenible con criterio bioclimático.",
+    en: "EDGE consulting, EDGE auditing, life safety (NFPA 101) and sustainable architectural design with a bioclimatic approach.",
+  },
+};
+const header = {
+  eyebrow: { es: "Servicios", en: "Services" },
+  title: {
+    es: "Servicios profesionales",
+    en: "Professional services",
+  },
+  intro: {
+    es: "Acompaño cada etapa del proyecto sostenible: desde el diseño bioclimático y la consultoría EDGE, hasta la auditoría que verifica la certificación.",
+    en: "I support every stage of a sustainable project: from bioclimatic design and EDGE consulting, through to the audit that verifies certification.",
+  },
+};
+const benefitsLabel = { es: "Incluye", en: "Includes" };
+const ctaLead = {
+  es: "¿Listo para certificar tu proyecto?",
+  en: "Ready to certify your project?",
+};
+---
+
+<BaseLayout
+  lang={lang}
+  page="servicios"
+  title={meta.title[lang]}
+  description={meta.description[lang]}
+>
+  <section class="page-head">
+    <div class="container container--narrow">
+      <span class="eyebrow">{header.eyebrow[lang]}</span>
+      <h1>{header.title[lang]}</h1>
+      <p class="lead">{header.intro[lang]}</p>
+    </div>
+  </section>
+
+  <div class="container">
+    {
+      servicios.map((s, i) => (
+        <section class="srv" id={s.id}>
+          <div class="srv__aside">
+            <span class="srv__num">{String(i + 1).padStart(2, "0")}</span>
+            <Icon name={s.icono} size={32} class="srv__icon" />
+          </div>
+          <div class="srv__main">
+            <h2 class="srv__title">{s.titulo[lang]}</h2>
+            {s.descripcion[lang].map((p) => (
+              <p class="srv__p">{p}</p>
+            ))}
+            <p class="srv__benefits-label">{benefitsLabel[lang]}</p>
+            <ul class="srv__benefits">
+              {s.beneficios[lang].map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ))
+    }
+  </div>
+
+  <section class="section">
+    <div class="container cta-band">
+      <p>{ctaLead[lang]}</p>
+      <a class="btn btn--solid" href={ROUTES.contacto[lang]}>
+        {UI.ctaContact[lang]}<Icon name="arrow" size={18} />
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../../styles/tokens" as *;
+
+  .page-head {
+    padding-block: var(--space-xl) var(--space-l);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: var(--space-xl);
+
+    h1 {
+      margin-block: var(--space-xs) var(--space-m);
+    }
+  }
+
+  .srv {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: var(--space-l);
+    padding-block: var(--space-l);
+    border-top: 1px solid var(--line);
+
+    &:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+      gap: var(--space-s);
+    }
+  }
+  .srv__aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+  .srv__num {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    color: var(--line);
+    line-height: 1;
+  }
+  .srv__icon {
+    color: var(--accent-deep);
+  }
+  .srv__title {
+    font-size: var(--step-2);
+    margin-bottom: var(--space-s);
+  }
+  .srv__p {
+    max-width: 62ch;
+    color: var(--ink-2);
+    margin-bottom: var(--space-s);
+  }
+  .srv__benefits-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-xs);
+  }
+  .srv__benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem var(--space-m);
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.3em;
+      font-size: var(--step--1);
+      color: var(--ink-2);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 0.5em;
+        height: 0.5em;
+        border-left: 1.5px solid var(--accent);
+        border-bottom: 1.5px solid var(--accent);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .cta-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    flex-wrap: wrap;
+    padding: var(--space-l);
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+
+    p {
+      font-family: var(--font-display);
+      font-size: var(--step-2);
+    }
+  }
+</style>

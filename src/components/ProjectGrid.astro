@@ -1,0 +1,98 @@
+---
+import type { Proyecto } from "../lib/content";
+import { UI, type Lang } from "../i18n/ui";
+import ProjectCard from "./ProjectCard.astro";
+
+interface Props {
+  proyectos: Proyecto[];
+  lang: Lang;
+  filterable?: boolean;
+}
+const { proyectos, lang, filterable = false } = Astro.props;
+---
+
+{
+  filterable && (
+    <div class="filters" role="group" aria-label="Filtro">
+      <button class="filters__btn is-active" data-filter="all">
+        {UI.filterAll[lang]}
+      </button>
+      <button class="filters__btn" data-filter="asesoria">
+        {UI.filterAsesoria[lang]}
+      </button>
+      <button class="filters__btn" data-filter="auditoria">
+        {UI.filterAuditoria[lang]}
+      </button>
+    </div>
+  )
+}
+
+<div class="project-grid" data-grid>
+  {proyectos.map((p) => <ProjectCard proyecto={p} lang={lang} />)}
+</div>
+
+{
+  filterable && (
+    <script is:inline>
+      (() => {
+        const grid = document.querySelector("[data-grid]");
+        const buttons = document.querySelectorAll(".filters__btn");
+        if (!grid) return;
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const f = btn.getAttribute("data-filter");
+            buttons.forEach((b) => b.classList.remove("is-active"));
+            btn.classList.add("is-active");
+            grid.querySelectorAll("[data-tipo]").forEach((card) => {
+              const show = f === "all" || card.getAttribute("data-tipo") === f;
+              card.style.display = show ? "" : "none";
+            });
+          });
+        });
+      })();
+    </script>
+  )
+}
+
+<style lang="scss">
+  @use "../styles/tokens" as *;
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--space-l);
+  }
+  .filters__btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 0.5em 1.2em;
+    font-size: var(--step--1);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--ink);
+    }
+    &.is-active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+
+    @media (max-width: $bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContactForm from "../ContactForm.astro";
+import Icon from "../Icon.astro";
+import { UI, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  title: { es: "Contacto · Arq. Nelly Cúneo", en: "Contact · Arch. Nelly Cúneo" },
+  description: {
+    es: "Conversemos sobre tu proyecto de certificación EDGE, auditoría o diseño sostenible. Escríbeme por WhatsApp, correo o LinkedIn.",
+    en: "Let’s talk about your EDGE certification, audit or sustainable design project. Reach me on WhatsApp, email or LinkedIn.",
+  },
+};
+const header = {
+  eyebrow: { es: "Contacto", en: "Contact" },
+  title: { es: "Conversemos", en: "Let’s talk" },
+  intro: {
+    es: "Cuéntame sobre tu proyecto y cómo puedo ayudarte a alcanzar la certificación EDGE. Te responderé a la brevedad.",
+    en: "Tell me about your project and how I can help you reach EDGE certification. I’ll get back to you shortly.",
+  },
+};
+const success = {
+  es: "¡Gracias! Tu mensaje fue enviado. Te responderé pronto.",
+  en: "Thank you! Your message was sent. I’ll reply soon.",
+};
+
+const whatsapp = "https://api.whatsapp.com/send?phone=51994670598";
+const email = "&#110;&#101;&#108;&#108;&#121;&#64;&#99;&#117;&#110;&#101;&#111;&#46;&#99;&#111;&#109;&#46;&#112;&#101;";
+const linkedin = "https://www.linkedin.com/in/nelly-cuneo/";
+---
+
+<BaseLayout
+  lang={lang}
+  page="contacto"
+  title={meta.title[lang]}
+  description={meta.description[lang]}
+>
+  <section class="page-head">
+    <div class="container container--narrow">
+      <span class="eyebrow">{header.eyebrow[lang]}</span>
+      <h1>{header.title[lang]}</h1>
+      <p class="lead">{header.intro[lang]}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <a class="contact-method" href={whatsapp} target="_blank" rel="noopener">
+          <Icon name="whatsapp" size={22} />
+          <span>
+            <strong>{UI.whatsapp[lang]}</strong>
+            <small>+51 994 670 598</small>
+          </span>
+        </a>
+        <a class="contact-method" href={`mailto:${email}`}>
+          <Icon name="mail" size={22} />
+          <span>
+            <strong>{UI.email[lang]}</strong>
+            <small set:html={email}></small>
+          </span>
+        </a>
+        <a class="contact-method" href={linkedin} target="_blank" rel="noopener">
+          <Icon name="linkedin" size={22} />
+          <span>
+            <strong>{UI.linkedin[lang]}</strong>
+            <small>in/nelly-cuneo</small>
+          </span>
+        </a>
+      </div>
+
+      <div class="contact-form-wrap">
+        <p class="contact-success" id="contact-success" hidden>{success[lang]}</p>
+        <ContactForm lang={lang} />
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    if (new URLSearchParams(location.search).get("ok") === "1") {
+      const el = document.getElementById("contact-success");
+      if (el) {
+        el.hidden = false;
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  </script>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../../styles/tokens" as *;
+
+  .page-head {
+    padding-block: var(--space-xl) var(--space-l);
+    border-bottom: 1px solid var(--line);
+
+    h1 {
+      margin-block: var(--space-xs) var(--space-m);
+    }
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: var(--space-xl);
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+      gap: var(--space-l);
+    }
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    padding: var(--space-m);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: var(--ink);
+      transform: translateX(3px);
+    }
+    :global(svg) {
+      color: var(--accent-deep);
+      flex-shrink: 0;
+    }
+    span {
+      display: flex;
+      flex-direction: column;
+    }
+    strong {
+      font-size: var(--step-0);
+    }
+    small {
+      color: var(--muted);
+      font-size: var(--step--1);
+    }
+  }
+  .contact-success {
+    padding: var(--space-s) var(--space-m);
+    margin-bottom: var(--space-m);
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    color: var(--accent-deep);
+    font-weight: 600;
+  }
+</style>

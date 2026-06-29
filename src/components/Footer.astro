@@ -1,0 +1,145 @@
+---
+import { NAV, ROUTES, UI, localizedPath, type Lang, type PageId } from "../i18n/ui";
+import Icon from "./Icon.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const year = 2026;
+const whatsapp = "https://api.whatsapp.com/send?phone=51994670598";
+// Correo ofuscado: nelly@cuneo.com.pe
+const email = "&#110;&#101;&#108;&#108;&#121;&#64;&#99;&#117;&#110;&#101;&#111;&#46;&#99;&#111;&#109;&#46;&#112;&#101;";
+const linkedin = "https://www.linkedin.com/in/nelly-cuneo/";
+---
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__brand">
+      <a class="footer__name" href={localizedPath("home", lang)}>
+        {UI.brandFull[lang]}
+      </a>
+      <p class="footer__cap">{UI.cap[lang]} · EDGE Expert &amp; EDGE Auditor</p>
+      <p class="footer__tagline">{UI.footerTagline[lang]}</p>
+    </div>
+
+    <nav class="footer__col" aria-label={UI.footerNav[lang]}>
+      <h2 class="footer__heading">{UI.footerNav[lang]}</h2>
+      <ul>
+        {
+          NAV.map((item) => (
+            <li>
+              <a href={ROUTES[item.page][lang]}>{item.label[lang]}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h2 class="footer__heading">{UI.footerContact[lang]}</h2>
+      <ul class="footer__contact">
+        <li>
+          <a href={whatsapp} target="_blank" rel="noopener">
+            <Icon name="whatsapp" size={18} /> {UI.whatsapp[lang]}
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${email}`}>
+            <Icon name="mail" size={18} /> <span set:html={email} />
+          </a>
+        </li>
+        <li>
+          <a href={linkedin} target="_blank" rel="noopener">
+            <Icon name="linkedin" size={18} /> {UI.linkedin[lang]}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bar container">
+    <span>© {year} {UI.brandFull[lang]}. {UI.footerRights[lang]}</span>
+  </div>
+</footer>
+
+<style lang="scss">
+  @use "../styles/tokens" as *;
+
+  .footer {
+    margin-top: var(--space-2xl);
+    background: var(--ink);
+    color: var(--paper);
+    padding-top: var(--space-xl);
+  }
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: var(--space-l);
+    padding-bottom: var(--space-l);
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+      gap: var(--space-m);
+    }
+  }
+  .footer__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-1);
+    color: var(--paper);
+    text-decoration: none;
+  }
+  .footer__cap {
+    font-size: var(--step--1);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--accent) 60%, var(--paper));
+    margin-top: 0.5rem;
+  }
+  .footer__tagline {
+    margin-top: var(--space-s);
+    max-width: 34ch;
+    color: color-mix(in srgb, var(--paper) 72%, transparent);
+    font-size: var(--step--1);
+    line-height: 1.6;
+  }
+  .footer__heading {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--paper) 55%, transparent);
+    margin-bottom: var(--space-s);
+  }
+  .footer__col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .footer__col a {
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    text-decoration: none;
+    font-size: var(--step--1);
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--paper);
+    }
+  }
+  .footer__contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .footer__bar {
+    padding-block: var(--space-m);
+    border-top: 1px solid color-mix(in srgb, var(--paper) 18%, transparent);
+    font-size: var(--step--1);
+    color: color-mix(in srgb, var(--paper) 55%, transparent);
+  }
+</style>

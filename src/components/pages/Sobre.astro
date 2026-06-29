@@ -1,0 +1,276 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../Icon.astro";
+import { ROUTES, UI, type Lang } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const meta = {
+  title: {
+    es: "Sobre Nelly Cúneo · Arquitecta, EDGE Expert & Auditor",
+    en: "About Nelly Cúneo · Architect, EDGE Expert & Auditor",
+  },
+  description: {
+    es: "Nelly Cúneo Galdós, arquitecta colegiada con máster en Arquitectura Bioclimática (UPM), EDGE Expert y EDGE Auditor, ex Green Building Consultant de IFC.",
+    en: "Nelly Cúneo Galdós, chartered architect with a Master’s in Bioclimatic Architecture (UPM), EDGE Expert and EDGE Auditor, former IFC Green Building Consultant.",
+  },
+};
+const header = {
+  eyebrow: { es: "Sobre Nelly", en: "About Nelly" },
+  name: { es: "Nelly Alexandra Cúneo Galdós", en: "Nelly Alexandra Cúneo Galdós" },
+  role: {
+    es: "Arquitecta · EDGE Expert & EDGE Auditor · CAP 8942",
+    en: "Architect · EDGE Expert & EDGE Auditor · CAP 8942",
+  },
+};
+
+const bio = {
+  es: [
+    "Soy arquitecta colegiada, titulada de la Universidad Ricardo Palma, con un Máster en Medio Ambiente y Arquitectura Bioclimática de la Universidad Politécnica de Madrid.",
+    "Fui Green Building Consultant para la Corporación Financiera Internacional (IFC), a cargo de dar apoyo técnico y difusión sobre la certificación EDGE en el Perú. Soy EDGE Expert y EDGE Auditor aprobada, lo que permite tiempos de revisión más cortos y alcanzar la certificación en menor plazo.",
+    "Tengo amplia experiencia como asesora en proyectos de seguridad relacionados a la protección de la vida, basados en el código NFPA 101 y el Reglamento Nacional de Edificaciones. Anteriormente estuve acreditada como LEED AP BD+C y formé parte de la mesa de trabajo LEED liderada por el Perú Green Building Council.",
+  ],
+  en: [
+    "I am a chartered architect, a graduate of Universidad Ricardo Palma, with a Master’s in Environment and Bioclimatic Architecture from the Polytechnic University of Madrid.",
+    "I was a Green Building Consultant for the International Finance Corporation (IFC), responsible for technical support and outreach on EDGE certification in Peru. I am an EDGE Expert and approved EDGE Auditor, which enables shorter review times and faster certification.",
+    "I have extensive experience advising on life-safety projects based on the NFPA 101 code and Peru’s National Building Code. I was previously accredited as LEED AP BD+C and was part of the LEED working group led by the Peru Green Building Council.",
+  ],
+};
+
+const credsTitle = { es: "Acreditaciones", en: "Accreditations" };
+const creds = {
+  es: [
+    "EDGE Expert",
+    "EDGE Auditor aprobada",
+    "Ex Green Building Consultant — IFC",
+    "Máster en Arquitectura Bioclimática — UPM (Madrid)",
+    "Arquitecta — Universidad Ricardo Palma",
+    "Anteriormente LEED AP BD+C",
+  ],
+  en: [
+    "EDGE Expert",
+    "Approved EDGE Auditor",
+    "Former Green Building Consultant — IFC",
+    "Master’s in Bioclimatic Architecture — UPM (Madrid)",
+    "Architect — Universidad Ricardo Palma",
+    "Formerly LEED AP BD+C",
+  ],
+};
+
+const milestonesTitle = { es: "Hitos", en: "Milestones" };
+const milestones = [
+  {
+    es: { t: "Primer proyecto en el Perú en obtener la Certificación Preliminar EDGE", d: "Edificio Multifamiliar Mariscal Castilla" },
+    en: { t: "First project in Peru to obtain the EDGE Preliminary Certification", d: "Mariscal Castilla residential building" },
+  },
+  {
+    es: { t: "Primer proyecto auditado en Cusco", d: "Multifamiliar Partisano" },
+    en: { t: "First audited project in Cusco", d: "Partisano residential building" },
+  },
+  {
+    es: { t: "Primer proyecto auditado EDGE Advanced", d: "Edificio Oficinas OL" },
+    en: { t: "First project audited under EDGE Advanced", d: "OL Offices building" },
+  },
+  {
+    es: { t: "Centro comercial más grande del mundo en certificar su diseño con EDGE", d: "Centro Comercial Puruchuco" },
+    en: { t: "Largest shopping center in the world to certify its design with EDGE", d: "Puruchuco Shopping Center" },
+  },
+  {
+    es: { t: "Auditoría a los 5 primeros proyectos del Estado peruano", d: "Centros de Empleo: Ica, San Martín, La Libertad, Arequipa y Chiclayo" },
+    en: { t: "Audit of the first 5 Peruvian government projects", d: "Employment Centers: Ica, San Martín, La Libertad, Arequipa and Chiclayo" },
+  },
+  {
+    es: { t: "Proyectos internacionales", d: "Ciudad de México, Guadalajara y Monterrey (México)" },
+    en: { t: "International projects", d: "Mexico City, Guadalajara and Monterrey (Mexico)" },
+  },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  page="sobre"
+  title={meta.title[lang]}
+  description={meta.description[lang]}
+>
+  <section class="page-head">
+    <div class="container about-head">
+      <div class="about-head__portrait" aria-hidden="true">
+        <span>NC</span>
+      </div>
+      <div>
+        <span class="eyebrow">{header.eyebrow[lang]}</span>
+        <h1 class="about-head__name">{header.name[lang]}</h1>
+        <p class="about-head__role">{header.role[lang]}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-grid">
+      <div class="about-bio">
+        {bio[lang].map((p) => <p>{p}</p>)}
+      </div>
+      <aside class="about-creds">
+        <h2 class="block-title">{credsTitle[lang]}</h2>
+        <ul>
+          {
+            creds[lang].map((c) => (
+              <li>
+                <Icon name="check" size={18} /> {c}
+              </li>
+            ))
+          }
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="block-title">{milestonesTitle[lang]}</h2>
+      <ol class="milestones">
+        {
+          milestones.map((m, i) => (
+            <li class="milestone">
+              <span class="milestone__n">{String(i + 1).padStart(2, "0")}</span>
+              <div>
+                <p class="milestone__t">{m[lang].t}</p>
+                <p class="milestone__d">{m[lang].d}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow why">
+      <a class="btn btn--solid" href={ROUTES.contacto[lang]}>
+        {UI.ctaContact[lang]}<Icon name="arrow" size={18} />
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../../styles/tokens" as *;
+
+  .page-head {
+    padding-block: var(--space-xl) var(--space-l);
+    border-bottom: 1px solid var(--line);
+  }
+  .about-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-l);
+    @media (max-width: $bp-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-m);
+    }
+  }
+  .about-head__portrait {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-soft), var(--paper-2));
+    border: 1px solid var(--line);
+
+    span {
+      font-family: var(--font-display);
+      font-size: var(--step-3);
+      color: var(--accent-deep);
+    }
+  }
+  .about-head__name {
+    font-size: var(--step-3);
+    margin-block: var(--space-xs) 0.5rem;
+  }
+  .about-head__role {
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--space-xl);
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+      gap: var(--space-l);
+    }
+  }
+  .about-bio p {
+    max-width: 60ch;
+    margin-bottom: var(--space-m);
+    color: var(--ink-2);
+    font-size: var(--step-0);
+  }
+  .block-title {
+    font-size: var(--step-1);
+    margin-bottom: var(--space-m);
+  }
+  .about-creds ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .about-creds li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6em;
+    font-size: var(--step--1);
+    color: var(--ink-2);
+
+    :global(svg) {
+      color: var(--accent-deep);
+      flex-shrink: 0;
+      margin-top: 0.15em;
+    }
+  }
+
+  .section--alt {
+    background: var(--paper-2);
+  }
+  .milestones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m) var(--space-l);
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .milestone {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-m);
+    align-items: start;
+    padding-bottom: var(--space-m);
+    border-bottom: 1px solid var(--line);
+
+    &__n {
+      font-family: var(--font-display);
+      font-size: var(--step-2);
+      color: var(--accent);
+      line-height: 1;
+    }
+    &__t {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    &__d {
+      font-size: var(--step--1);
+      color: var(--muted);
+    }
+  }
+  .why {
+    text-align: center;
+  }
+</style>

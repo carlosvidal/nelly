@@ -1,16 +1,23 @@
 {
   "name": "nelly",
-  "version": "1.0.0",
-  "description": "personal website",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Sitio profesional de la Arq. Nelly Cúneo Galdós — consultoría y auditoría EDGE",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
-    "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/inter": "^5.1.1",
+    "@fontsource/archivo": "^5.1.0",
+    "astro": "^5.1.1"
+  },
   "devDependencies": {
-    "sass": "^1.70.0"
+    "sass": "^1.83.0"
   }
 }
